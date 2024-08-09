@@ -13,7 +13,6 @@
 "margin-top": 8,
 
 "modules-left": [
-  "custom/menu",
 	"hyprland/window",
 	"hyprland/workspaces#rw",
 	],
