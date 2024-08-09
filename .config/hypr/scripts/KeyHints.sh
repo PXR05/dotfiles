@@ -1,6 +1,4 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
-# Keyhints. Idea got from Garuda Hyprland
 
 # Detect monitor resolution and scale
 x_mon=$(hyprctl -j monitors | jq '.[] | select(.focused==true) | .width')
@@ -33,12 +31,11 @@ yad --width=$dynamic_width --height=$dynamic_height \
     --title="Keybindings" \
     --no-buttons \
     --list \
-    --column=Key: \
-    --column=Description: \
-    --column=Note: \
+    --column=Key \
+    --column=Action \
+    --column=* \
     --timeout-indicator=bottom \
-" enter" "Terminal" "(kitty)" \
-" A" "Desktop Overview" "(AGS Overview)" \
+" Enter" "Terminal" "(kitty)" \
 " D" "App Launcher" "(rofi-wayland)" \
 " T" "Open File Manager" "(Thunar)" \
 " Q" "Close active window" "" \
@@ -47,23 +44,22 @@ yad --width=$dynamic_width --height=$dynamic_height \
 " W" "Choose wallpaper" "(Wallpaper Menu)" \
 " Shift W" "Choose wallpaper effects" "(imagemagick + swww)" \
 " B" "Hide/UnHide Waybar" "waybar" \
-" CTRL B" "Choose waybar styles" "(waybar styles)" \
-" ALT B" "Choose waybar layout" "(waybar layout)" \
-" ALT R" "Reload Waybar swaync Rofi" "" \
-" SHIFT N" "Launch Notification Panel" "(swaync)" \
+" Ctrl B" "Choose waybar styles" "(waybar styles)" \
+" Alt B" "Choose waybar layout" "(waybar layout)" \
+" Alt R" "Reload Waybar swaync Rofi" "" \
+" Shift N" "Launch Notification Panel" "(swaync)" \
 " Print" "Screenshot" "(grim)" \
 " Shift Print" "Screenshot region" "(grim + slurp)" \
 " Shift S" "Screenshot region" "(swappy)" \
-"ALT Print" "Screenshot active window" "" \
-"CTRL ALT P" "Power menu" "(wlogout)" \
-"CTRL ALT L" "Screen lock" "(hyprlock)" \
-"CTRL ALT Del" "Hyprland Exit" "" \
+"Alt Print" "Screenshot active window" "" \
+"Ctrl Alt P" "Power menu" "(wlogout)" \
+"Ctrl Alt L" "Screen lock" "(hyprlock)" \
+"Ctrl Alt Del" "Hyprland Exit" "" \
 " F" "Fullscreen" "" \
-" ALT L" "Toggle Dwindle | Master Layout" "" \
+" Alt L" "Toggle Dwindle | Master Layout" "" \
 " Shift F" "Toggle float" "(single window)" \
-" ALT F" "Toggle all windows to float" "(all windows)" \
-" ALT E" "Rofi Emoticons" ""\
-" ALT V" "Clipboard Manager" "(cliphist))" \
+" Alt F" "Toggle all windows to float" "(all windows)" \
+" Alt E" "Rofi Emoticons" "" \
+" Alt V" "Clipboard Manager" "(cliphist)" \
 " E" "View or Edit Keybinds, Settings, Monitor" "" \
 "" "" "" \
-"More tips:" "https://github.com/JaKooLit/Hyprland-Dots/wiki" ""\
