@@ -1,0 +1,314 @@
+
+:root, * {
+    --in-content-page-background: black !important;
+    --box-background-color: #121212 !important;
+    --in-content-table-background: #121212 !important;
+    --in-content-page-background: black !important;
+    --in-content-accent-color: white !important;
+    --color-cyan-50: white !important;
+    --in-content-table-header-background: white !important;
+    --in-content-box-border-color: transparent !important;
+    --section-highlight-background-color: rgba(200, 200, 200, 0.15) !important;
+    --in-content-box-info-background: #121212 !important;
+    --dark-theme-background: black !important;
+    --dark-theme-foreground: #c8c8c8 !important;
+    --primary-color: white !important;
+}
+
+select {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+option {
+    background-color: #121212 !important;
+    color: white !important;
+}
+
+@-moz-document url-prefix(youtube) {
+    ytd-watch-flexy[flexy]:not([full-bleed-player][full-bleed-no-max-width-columns]) #columns.ytd-watch-flexy {
+        max-width: auto !important;
+    }
+}
+
+@-moz-document url-prefix(about:) {
+    :root {
+        color: #c8c8c8 !important;
+        font-family: "JetBrains Mono", monospace !important;
+    }
+}
+
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) { 
+    * {
+        font-family: monospace !important;
+    }
+    :root {
+        --newtab-primary-action-background: #ffffff !important;
+        --newtab-primary-action-background-dimmed: transparent !important;
+        --newtab-background-color-secondary: rgb(18, 18, 18) !important;
+        font-family: monospace !important;
+    }
+    
+
+    main section {
+	    margin-bottom: 0 !important;
+    }
+    
+
+    body {
+        font-family: monospace !important;
+	    --newtab-search-icon: url() !important;
+        
+        background-color: transparent !important;
+        
+        &::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            background: transparent no-repeat url() center;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+        }
+    }
+    
+    .search-inner-wrapper, 
+    .logo-and-wordmark {
+        display: none !important;
+    }
+    
+    .info {
+        background-image: none !important;
+        padding: 20px !important;
+        margin-top: 0 !important;
+    }
+    
+    .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a:is(.active, :focus) .tile {
+	    box-shadow: 0 0 0 0 var(--newtab-primary-action-background) !important;
+    }
+    
+    .click-target-container *, .top-sites-list * {
+        color: #fff !important;
+    }
+    
+    .ds-outer-wrapper-breakpoint-override main {
+        width: auto !important;
+    }
+    
+    .outer-wrapper.ds-outer-wrapper-breakpoint-override {
+        padding: 0 !important;
+    }
+    
+    .personalize-button {
+        opacity: 0 !important;
+    }
+    
+    .personalize-button:hover, .personalize-button:active {
+        opacity: 0.5 !important;
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(2rem) !important;
+    }
+
+    .top-sites-list {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        place-items: center;
+        column-gap: 2em;
+        row-gap: 6em;
+    }
+    
+    .top-sites-list .hide-for-narrow {
+        display: inline-block !important;
+    }
+
+    .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) .tile {
+        border: 1.5px solid var(--newtab-primary-action-background);
+    }
+
+    .top-site-inner {
+        height: 100% !important;
+    }
+    
+    .sponsored-label {
+        display: none !important;
+    }
+    
+    .collapsible-section {
+        padding: 0 !important;
+    }
+    
+    .top-site-button {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        height: 3em !important;
+        background-color: transparent !important;
+    }
+    
+    .top-site-outer {
+        position: relative;
+        height: fit-content !important;
+        width: fit-content !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+    
+    .top-site-outer .top-site-icon {
+        background-color: transparent !important;
+    }
+    
+    .top-site-outer .tile {
+        display: none !important;
+        width: fit-content !important;
+        scale: 0.5 !important;
+        filter: grayscale(1) !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+        box-shadow: none !important;
+        border: none !important;
+        border-radius: none !important;
+    }
+    
+    .top-site-outer .title span {
+        color: #babed8 !important;
+        font-size: 1.25em !important;
+        width: 8em !important;
+    }
+    
+    .top-site-outer .title {
+        padding-bottom: 0.5em;
+        transition: all 0.15s ease-out;
+        border-bottom: 1px solid transparent;
+        letter-spacing: 0.1em;
+    }
+    
+    .top-site-outer:hover {
+        background: none !important;
+        .title {
+            border-color: #aaaaaa;
+            span {
+                color: white !important;
+            }
+        }
+    }
+    
+    .top-site-outer .context-menu-button {
+        inset-inline-end: 0 !important;
+        height: 100% !important;
+        top: 0 !important;
+        right: 8px !important;
+        opacity: 0 !important;
+    }
+    
+    .top-site-outer .context-menu-button:is(:active, :focus) {
+        background-color: transparent !important;
+    }
+       
+    .context-menu {
+        font-size: 11px !important;
+        padding: 6px !important;
+        border-radius: 8px !important;
+    }
+    
+    .context-menu > ul {
+        display: flex !important;
+        flex-direction: column;
+        gap: 4px;
+        padding: 3px 2px !important;
+    }
+    
+    .context-menu > ul button {
+        border-radius: 4px !important;
+    }
+    
+    .context-menu .separator {
+        margin: 4px auto !important;
+        width: 90% !important;
+    }
+    
+    .icon.icon-pin-small {
+        display: none !important;
+    }
+
+    .non-collapsible-section {
+	    display: none;
+    }
+
+    .search-wrapper input {
+    	border-width: 1.5px !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+        backdrop-filter: blur(1rem) !important;
+        color: #fff !important;
+        padding-inline-start: 1rem !important;
+        padding-inline-end: 1rem !important;
+    }
+
+    .search-wrapper input::placeholder {
+	    color: rgba(255, 255, 255, 0.5) !important;
+        opacity: 1 !important;
+    }
+
+    .search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
+	    border-width: 1.5px !important;
+	    box-shadow: 0 0 0 0 transparent !important;
+    }
+
+    .search-wrapper .search-button {
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    .search-wrapper .logo-and-wordmark {
+	    display: none !important;
+    }
+
+    .customize-menu {
+        color: rgba(255, 255, 255, 0.8) !important;
+        background-color: transparent !important;
+        backdrop-filter: blur(1rem) !important;
+    }
+
+    .customize-menu .close-button {
+	    color: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    .home-section .section .sponsored-checkbox {
+	    background-color: rgba(255, 255, 255, 0.25) !important;
+    }
+
+    .home-section .section .sponsored-checkbox:checked {
+	    fill: rgba(255, 255, 255, 0.8) !important;
+    }
+
+    .toggle-button {
+    	--toggle-dot-background-color-on-pressed: rgba(0, 0, 0, 0.7) !important;
+    }
+
+    .toggle-button[aria-pressed="true"], .toggle-button[aria-pressed="true"]:enabled:hover {
+	    background-color: rgba(255, 255, 255, 0.75) !important;
+    }
+
+    .home-section .section .selector {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        backdrop-filter: blur(2rem) !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        border-color: transparent !important;
+        fill: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    #mainPopupSet menupopup {
+      --panel-background: rgb(18, 18, 18) !important;
+    }
+    
+    @media (max-width: 768px) {
+        .top-sites-list {
+            grid-template-columns: 1fr 1fr;
+            place-items: center;
+            column-gap: 1em;
+            row-gap: 4em;
+        }
+    }
+}
+

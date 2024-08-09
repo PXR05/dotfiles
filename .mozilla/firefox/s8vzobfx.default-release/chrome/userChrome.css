@@ -1,0 +1,13 @@
+#navigator-toolbox {
+  background: rgba(27,26,32,1) !important;
+  border: none !important;
+}
+
+#nav-bar {
+  background: none !important;
+  border: none !important;
+}
+
+#alltabs-button {
+  display: none;
+}
