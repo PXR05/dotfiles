@@ -9,20 +9,6 @@ cp -f .zshrc ~
 cp -rf .config/* ~/.config
 ```
 
-## Prerequisite
-- **curl**
-  ```sh
-  sudo pacman -Syu curl
-  ```
-- **yay**
-  ```sh
-  sudo pacman -Syu --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
-  ```
-- **rust**
-  ```sh
-  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-  ```
-
 ## Packages
 - **btop** (Resource Monitor)
 - **fastfetch** (System Info)
@@ -37,14 +23,9 @@ cp -rf .config/* ~/.config
 - **wlogout** (Logout Menu)
 - **zsh** (Shell)
   
-### pacman
-```sh
-sudo pacman -S fasftfetch hyprland kitty rofi swappy swaync waybar zsh --no-confirm
-```
-
 ### yay
 ```sh
-sudo yay -S btop wlogout --no-confirm
+sudo yay -S btop wlogout fasftfetch hyprland kitty rofi swappy swaync waybar zsh --no-confirm
 ```
 
 ### curl
