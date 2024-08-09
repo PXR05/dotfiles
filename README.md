@@ -13,7 +13,6 @@ cp -rf .config/* ~/.config
 ```
 
 ## Packages
-- **ags** (Desktop Overview)
 - **btop** (Resource Monitor)
 - **fastfetch** (System Info)
 - **hyprland** (Window Manager)
@@ -28,5 +27,5 @@ cp -rf .config/* ~/.config
 - **zsh** (Shell)
 
 ```sh
-ags btop fasftfetch gtk-3.0 gtk-4.0 hyprland kitty oh-my-posh qt5ct qt6ct rofi swappy swaync wallust waybar wlogout zsh
+btop fasftfetch gtk-3.0 gtk-4.0 hyprland kitty oh-my-posh qt5ct qt6ct rofi swappy swaync wallust waybar wlogout zsh
 ```
