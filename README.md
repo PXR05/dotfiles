@@ -39,12 +39,12 @@ cp -rf .config/* ~/.config
   
 ### pacman
 ```sh
-sudo pacman -S fasftfetch hyprland kitty rofi swappy swaync waybar zsh
+sudo pacman -S fasftfetch hyprland kitty rofi swappy swaync waybar zsh --no-confirm
 ```
 
 ### yay
 ```sh
-sudo yay -S btop wlogout
+sudo yay -S btop wlogout --no-confirm
 ```
 
 ### curl
