@@ -1,4 +1,3 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 // ### TOP Simple ## //
 
 {
@@ -13,23 +12,28 @@
 "margin-right": 8,
 "margin-top": 8,
 
-"modules-left": [	
+"modules-left": [
+  "custom/menu",
 	"hyprland/window",
 	"hyprland/workspaces#rw",
 	],
     
 "modules-center": [
   "clock#3",
-  "custom/separator#line",
-  "custom/swaync"
 ],
     
 "modules-right": [
 	"tray",
+  "custom/separator#line",
  	"group/audio",
+  "custom/separator#line",
+  "backlight#2",
+  "custom/separator#line",
   "network",
+  "custom/separator#line",
 	"battery",
-	"custom/power",
+  "custom/separator#line",
+  "custom/swaync"
 	],
 }
 

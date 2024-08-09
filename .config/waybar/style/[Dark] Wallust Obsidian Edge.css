@@ -1,10 +1,7 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
-/* Dark - Obsidian Edge */
-
 @import '../../.config/waybar/wallust/colors-waybar.css';
 
 * {
-font-family: "JetBrainsMono Nerd Font Mono";
+font-family: "JetBrainsMono Nerd Font Mono", monospace;
 font-weight: bold;
   min-height: 0;
 font-size: 100%;
@@ -20,9 +17,14 @@ window#waybar.hidden {
     opacity: 0;
 }
 
-window#waybar.empty,
+window#waybar.empty {
+    background: rgba(0,0,0,0.25);
+}
+
 window#waybar.empty #window {
-    background: transparent;
+  background: transparent;
+  padding: 0;
+  margin: 0;
 }
 
 tooltip {
@@ -93,9 +95,6 @@ tooltip label {
     color: @foreground;
     background-color: transparent;
     border-radius: 15px;
- 	/*padding-left: 2px;*/
-    /*padding-right: 2px;*/
-    /*animation: gradient_f 20s ease-in infinite;*/
     transition: all 0.15s ease-out;
 }
 
@@ -145,11 +144,12 @@ tooltip label {
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
     color: @foreground;
-    border-radius: 8px;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-right: 6px;
-	padding-left: 6px;
+    border-radius: 4px;
+	  padding-top: 8px;
+	  padding-bottom: 8px;
+	  padding-right: 8px;
+	  padding-left: 8px;
+    font-size: 1rem;
 }
 
 #temperature.critical {

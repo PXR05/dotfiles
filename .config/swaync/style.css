@@ -223,7 +223,7 @@
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
     margin: 8px;
-    padding: 8px 32px;
+    padding: 8px 16px;
     background: @noti-bg-alt;
     border-radius: 8px;
     color: @color0;
@@ -250,7 +250,7 @@ trough {
   margin-left: 16px;
 }
 
-trough highlight {
+highlight {
   background: @color0;
   border-radius: 9999px;
 }
@@ -277,11 +277,11 @@ bac.widget-backlight>box>button,
 }
 
 .per-app-volume {
-    background-color: @noti-bg;
+    background-color: @noti-bg-alt;
     padding: 4px 8px 8px;
     margin: 0 8px 8px;
     border-radius: 10px;
-	color: @text-color
+	color: @color0;
 }
 
 .low {

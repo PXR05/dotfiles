@@ -1,5 +1,4 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Scripts for volume controls for audio and mic 
 
 iDIR="$HOME/.config/swaync/icons"
@@ -44,7 +43,7 @@ inc_volume() {
     if [ "$(pamixer --get-mute)" == "true" ]; then
         toggle_mute
     else
-        pamixer -i 5 --allow-boost --set-limit 150 && notify_user
+        pamixer -i 1 --allow-boost --set-limit 150
     fi
 }
 
@@ -53,7 +52,7 @@ dec_volume() {
     if [ "$(pamixer --get-mute)" == "true" ]; then
         toggle_mute
     else
-        pamixer -d 5 && notify_user
+        pamixer -d 1
     fi
 }
 
@@ -106,7 +105,7 @@ inc_mic_volume() {
     if [ "$(pamixer --default-source --get-mute)" == "true" ]; then
         toggle_mic
     else
-        pamixer --default-source -i 5 && notify_mic_user
+        pamixer --default-source -i 1
     fi
 }
 
@@ -115,7 +114,7 @@ dec_mic_volume() {
     if [ "$(pamixer --default-source --get-mute)" == "true" ]; then
         toggle-mic
     else
-        pamixer --default-source -d 5 && notify_mic_user
+        pamixer --default-source -d 1
     fi
 }
 

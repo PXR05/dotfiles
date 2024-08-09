@@ -1,10 +1,9 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Script for Monitor backlights (if supported) using brightnessctl
 
 iDIR="$HOME/.config/swaync/icons"
 notification_timeout=1000
-step=10  # INCREASE/DECREASE BY THIS VALUE
+step=1 # INCREASE/DECREASE BY THIS VALUE
 
 # Get brightness
 get_backlight() {
@@ -45,8 +44,8 @@ change_backlight() {
 	fi
 
 	# Ensure new brightness is within valid range
-	if (( new_brightness < 5 )); then
-		new_brightness=5
+	if (( new_brightness < 0 )); then
+		new_brightness=0
 	elif (( new_brightness > 100 )); then
 		new_brightness=100
 	fi
@@ -54,7 +53,6 @@ change_backlight() {
 	brightnessctl set "${new_brightness}%"
 	get_icon
 	current=$new_brightness
-	notify_user
 }
 
 # Execute accordingly
