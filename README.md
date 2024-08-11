@@ -26,7 +26,7 @@ cp -rf .config/* ~/.config
   
 ### yay
 ```sh
-sudo yay -S btop wlogout fastfetch hyprland kitty rofi-wayland swappy swaync swww waybar zsh
+sudo yay -S btop eza fastfetch hyprland kitty neovim ripgrep rofi-wayland swappy swaync swww waybar wlogout zsh
 ```
 
 ### curl
