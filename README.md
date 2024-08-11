@@ -15,9 +15,10 @@ cp -rf .config/* ~/.config
 - **hyprland** (Window Manager)
 - **kitty** (Terminal Emulator)
 - **oh-my-posh** (Prompt Theme)
-- **rofi** (Launcher)
+- **rofi-wayland** (Launcher)
 - **swappy** (Screenshot)
 - **swaync** (Notification Center)
+- **swww** (Wallpaper)
 - **wallust** (Palette Generator)
 - **waybar** (Status Bar)
 - **wlogout** (Logout Menu)
@@ -25,7 +26,7 @@ cp -rf .config/* ~/.config
   
 ### yay
 ```sh
-sudo yay -S btop wlogout fasftfetch hyprland kitty rofi swappy swaync waybar zsh --no-confirm
+sudo yay -S btop wlogout fastfetch hyprland kitty rofi-wayland swappy swaync swww waybar zsh
 ```
 
 ### curl
