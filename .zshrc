@@ -51,7 +51,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # plugins
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # oh-my-posh
