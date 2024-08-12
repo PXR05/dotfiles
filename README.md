@@ -25,13 +25,30 @@ cp -rf .config/* ~/.config
 - **zsh** (Shell)
   
 ### yay
+#### hyprland
 ```sh
-sudo yay -S btop eza fastfetch hyprland kitty neovim ripgrep rofi-wayland swappy swaync swww waybar wlogout zsh
+yay -S hyprland hyprlock xdg-desktop-portal-hyprland xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct libva libva-nvidia-driver-git linux-headers 
+```
+#### pipewire
+```sh
+pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumber
+```
+#### packages
+```sh
+bat brightnessctl btop discord eza fastfetch firefox kitty neovim ripgrep rofi-wayland swappy swaync swww waybar wlogout zsh
 ```
 
 ### curl
+#### terminal
 ```sh
-curl -s https://ohmyposh.dev/install.sh | bash -s
+curl -s https://ohmyposh.dev/install.sh | bash -s && \
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting && \
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+```
+#### dev
+```sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
+nvm install 20
 ```
 
 ### cargo

@@ -1,14 +1,14 @@
 @import '../../.config/waybar/wallust/colors-waybar.css';
 
-@define-color noti-border-color @color12;
-@define-color noti-bg-alt @color7;
-@define-color noti-bg #111111;
-@define-color noti-bg-hover @color9;
-@define-color text-color @foreground;
-@define-color text-color-alt @foreground;
-@define-color text-color-disabled @color12;
+@define-color text-color @color0;
+@define-color text-color-alt @color9;
+@define-color accent @color7;
+@define-color accent-dark @color6;
+@define-color light @foreground;
+@define-color border-color @color12;
+
 * {
-    font-family: "JetBrains Mono Nerd Font";
+    font-family: "JetBrains Mono Nerd Font Mono";
     font-weight: 400;
 }
 
@@ -23,29 +23,29 @@
     outline: none;
     margin: 8px 16px;
     padding: 0px;
-  color: @color0;
+  color: @text-color;
 }
 
 .notification-row .notification-background {
-    color: @color0;
+    color: @text-color;
     background-color: transparent;
     box-shadow: none;
 }
 
 .notification {
-  color: @color0;
+  color: @text-color;
 	border-radius: 8px;
   box-shadow: none;
   margin: 0px;
 }
 
 .notification-content{
-	color: @color0;
-    background: @noti-bg-alt;
+	color: @text-color;
+    background: @accent;
   box-shadow: none;
     padding: 8px;
     border-radius: 8px;
-    border: 0px solid @noti-border-color;
+    border: 0px solid @border-color;
     margin-top: 0px;
 }
 
@@ -61,16 +61,16 @@
 }
 
 .notification-action {
-    border: 1px solid @noti-border-color;
+    border: 1px solid @border-color;
     border-top: none;
     border-radius: 8px;
-    color: @color0;
+    color: @text-color;
 }
 
 
 .notification-default-action:hover,
 .notification-action:hover {
-    color: @color0;
+    color: @text-color;
     background: transparent;
 }
 
@@ -86,48 +86,17 @@
 
 .notification-action:first-child {
     border-bottom-left-radius: 8px;
-    background: @noti-bg-alt
+    background: @accent
 }
 
 .notification-action:last-child {
     border-bottom-right-radius: 8px;
-    background: @noti-bg-alt
-}
-
-.inline-reply {
-    margin-top: 8px
-}
-
-.inline-reply-entry {
-    background: @noti-bg-alt;
-    color: @color0;
-    caret-color: @text-color;
-    border: 1px solid @noti-border-color;
-    border-radius: 10px
-}
-
-.inline-reply-button {
-	font-size: 0.5rem;
-    margin-left: 4px;
-    background: @noti-bg;
-    border: 1px solid @noti-border-color;
-    border-radius: 10px;
-    color: @color0
-}
-
-.inline-reply-button:disabled {
-    background: initial;
-    color: @text-color-disabled;
-    border: 1px solid transparent
-}
-
-.inline-reply-button:hover {
-    background: @noti-bg-hover
+    background: @accent
 }
 
 .body-image {
     margin-top: 6px;
-    color: @text-color-alt;
+    color: @light;
     border-radius: 10px
 }
 
@@ -135,7 +104,7 @@
     font-size: 1rem;
     font-weight: bold;
     background: transparent;
-    color: @color0;
+    color: @text-color;
     text-shadow: none;
     margin-bottom: 4px;
 }
@@ -144,23 +113,19 @@
     font-size: 1rem;
     font-weight: bold;
     background: transparent;
-    color: @color0;
-    text-shadow: none;
+    color: @text-color;
 }
 
 .body {
     font-size: 1rem;
     background: transparent;
-    color: @color0;
-    text-shadow: none
+    color: @text-color;
 }
 
 .control-center {
     background: rgba(0,0,0,0.25);
-    border: 0px solid @noti-border-color;
-	  color: @noti-bg-alt;
+	  color: @accent;
     border-radius: 8px;
-    padding: 0px;
 }
 
 .control-center-list {
@@ -189,8 +154,8 @@
 }
 
 .widget-mpris {
-    color: @color0;
-    background: @noti-bg-alt;
+    color: @text-color;
+    background: @accent;
     margin: 0px 16px;
     margin-bottom: 16px;
     border-radius: 8px;
@@ -202,11 +167,14 @@
 
 .widget-mpris-player {
     padding: 4px;
+    margin: 24px;
+    border-radius: 8px;
+    color: @accent;
 }
 
 .widget-mpris-title {
     font-weight: 400;
-    font-size: 1rem
+    font-size: 1.25rem;
 }
 
 .widget-mpris-subtitle {
@@ -215,73 +183,61 @@
 
 .widget-buttons-grid {
     font-size: 1.5rem;
-	  color: @color0;
-    margin: 0px;
+	  color: @text-color;
+    margin: 16px;
     border-radius: 8px;
-    background: transparent;
+    background: @accent;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
-    margin: 8px;
-    padding: 8px 16px;
-    background: @noti-bg-alt;
+    background: transparent;
+    padding: 8px 28px;
     border-radius: 8px;
-    color: @color0;
+    color: @text-color;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-    color: @color9
-}
-
-.widget-menubar>box>.menu-button-bar>button {
-    border: none;
-    background: transparent
-}
-
-.topbar-buttons>button {
-    border: none;
-    background: transparent
+    background: alpha(@text-color, 0.15);
 }
 
 trough {
   border:unset;
-  background-color: @color6;
+  background-color: @accent-dark;
   border-radius: 9999px;
   margin-left: 16px;
 }
 
 highlight {
-  background: @color0;
+  background: @text-color;
   border-radius: 9999px;
 }
 
 trough slider {
   color:unset;
-  background-color: @color0;
+  background-color: @text-color;
 }
 
 .widget-volume, .widget-backlight {
-    background: @noti-bg-alt;
+    background: @accent;
     padding: 2px 16px;
     margin: 0px 16px;
     margin-bottom: 16px;
-    border-radius: 10px;
+    border-radius: 8px;
     font-size: 1.5rem;
-    color: @color0
+    color: @text-color
 }
 
 bac.widget-backlight>box>button,
 .widget-volume>box>button {
-    background: @color0;
-    border: none
+    background: @text-color;
 }
 
 .per-app-volume {
-    background-color: @noti-bg-alt;
+    background-color: @accent;
     padding: 4px 8px 8px;
     margin: 0 8px 8px;
     border-radius: 10px;
-	color: @color0;
+	  color: @text-color;
 }
 
 .low {

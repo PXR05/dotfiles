@@ -1,5 +1,4 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  ##
 # Scripts for refreshing ags waybar, rofi, swaync, wallust
 
 SCRIPTSDIR=$HOME/.config/hypr/scripts
@@ -22,25 +21,11 @@ for _prs in "${_ps[@]}"; do
     fi
 done
 
-# quit ags
-ags -q
-
-sleep 0.3
 # Relaunch waybar
 waybar &
 
 # relaunch swaync
 sleep 0.5
 swaync > /dev/null 2>&1 &
-
-# relaunch ags
-ags &
-
-# Relaunching rainbow borders if the script exists
-sleep 1
-if file_exists "${UserScripts}/RainbowBorders.sh"; then
-    ${UserScripts}/RainbowBorders.sh &
-fi
-
 
 exit 0

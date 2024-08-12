@@ -24,7 +24,7 @@
 "modules-right": [
 	"tray",
   "custom/separator#line",
- 	"group/audio",
+ 	"pulseaudio",
   "custom/separator#line",
   "backlight#2",
   "custom/separator#line",

@@ -1,7 +1,5 @@
 #!/bin/bash
-# /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  #
 # Wallpaper Effects using imagemagick
-# Inspiration from ML4W - Stephan Raabe https://gitlab.com/stephan-raabe/dotfiles
 
 # variables
 current_wallpaper="$HOME/.config/hypr/wallpaper_effects/.wallpaper_current"

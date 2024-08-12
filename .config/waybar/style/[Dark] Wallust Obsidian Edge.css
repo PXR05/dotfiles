@@ -1,15 +1,15 @@
 @import '../../.config/waybar/wallust/colors-waybar.css';
 
 * {
-font-family: "JetBrainsMono Nerd Font Mono", monospace;
-font-weight: bold;
+  font-family: "JetBrainsMono Nerd Font Mono Regular", monospace;
+  font-weight: bold;
   min-height: 0;
-font-size: 100%;
-font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+  font-size: 100%;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
 window#waybar {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.25);
 	  border-radius: 8px;
 }
 
@@ -18,7 +18,7 @@ window#waybar.hidden {
 }
 
 window#waybar.empty {
-    background: rgba(0,0,0,0.25);
+    background: transparent;
 }
 
 window#waybar.empty #window {
@@ -28,24 +28,20 @@ window#waybar.empty #window {
 }
 
 tooltip {
-	color: @foreground;
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+	  color: @foreground;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
 }
 
 tooltip label {
     color: @foreground;
-    padding-right: 2px;
-    padding-left: 2px;
+    padding: 2px;
 }
 
 /*-----module groups----*/
 .modules-right,
 .modules-center,
 .modules-left {
-    /*opacity: 0.5;*/
-    /*background-color: @color0;*/
-    border: 0px solid #b4befe;
     border-radius: 8px;
 	  padding-top: 2px;
 	  padding-bottom: 2px;
@@ -54,19 +50,13 @@ tooltip label {
     transition: all 0.1s ease-out;
 }
 
-/*window#waybar.empty .modules-left,*/
-/*window#waybar.empty .modules-center,*/
-/*window#waybar.empty .modules-right {*/
-/*  background-color: transparent;*/
-/*}*/
-
 #taskbar button,
 #workspaces button {
     color: @color6;
     box-shadow: none;
 	text-shadow: none;
     padding: 0px;
-    border-radius: 9px;
+    border-radius: 4px;
     padding-left: 4px;
     padding-right: 4px;
     transition: all 0.15s ease-out;
@@ -75,9 +65,6 @@ tooltip label {
 #taskbar button.active,
 #workspaces button.active {
     color: @foreground;
-    border-radius: 15px 15px 15px 15px;
-    padding-left: 8px;
-    padding-right: 8px;
     transition: all 0.15s ease-out;
 }
 
@@ -86,15 +73,15 @@ tooltip label {
 }
 
 #workspaces button.urgent {
-    color: #11111b;
-    border-radius: 10px;
+    color: @color0;
+    border-radius: 8px;
 }
 
 #taskbar button:hover,
 #workspaces button:hover {
     color: @foreground;
     background-color: transparent;
-    border-radius: 15px;
+    border-radius: 8px;
     transition: all 0.15s ease-out;
 }
 
@@ -145,10 +132,7 @@ tooltip label {
 #custom-weather.sunnyDay {
     color: @foreground;
     border-radius: 4px;
-	  padding-top: 8px;
-	  padding-bottom: 8px;
-	  padding-right: 8px;
-	  padding-left: 8px;
+	  padding: 8px;
     font-size: 1rem;
 }
 

@@ -14,7 +14,6 @@ alias ls="eza --color=auto"
 alias la="eza -a"
 alias ll="eza -la"
 alias nf="fastfetch --config ~/.config/fastfetch/config-compact.jsonc"
-alias grep="rg"
 alias vim="nvim"
 alias cls="clear"
 alias ff="fzf"
@@ -22,16 +21,10 @@ alias edit-zsh="nvim ~/.zshrc"
 alias edit-posh="nvim ~/.config/omp/tokyo.omp.json"
 alias edit-kitty="nvim ~/.config/kitty/kitty.conf"
 alias edit-nf="nvim ~/.config/fastfetch/config-compact.jsonc"
-alias edit-barLayout="nvim ~/.config/waybar/config"
-alias edit-barStyle="nvim ~/.config/waybar/style.css"
-alias edit-barMod="nvim ~/.config/waybar/modules"
-alias edit-hypr="nvim ~/.config/hypr/UserConfigs/UserSettings.conf"
-alias edit-hyprlock="nvim ~/.config/hypr/hyprlock.conf"
-alias edit-wlogLayout="nvim ~/.config/wlogout/layout"
-alias edit-wlogStyle="nvim ~/.config/wlogout/style.css"
 alias edit-rofi="nvim ~/.config/rofi/master-config.rasi"
 alias edit-ncLayout="nvim ~/.config/swaync/config.json"
 alias edit-ncStyle="nvim ~/.config/swaync/style.css"
+alias goto-nvim="cd ~/.config/nvim/lua/"
 alias goto-rofi="cd ~/.config/rofi/"
 alias goto-hypr="cd ~/.config/hypr/"
 
@@ -51,7 +44,7 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # plugins
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # oh-my-posh
@@ -67,6 +60,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
 
 # fzf
+source <(fzf --zsh)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 zle     -N            fzf-file-widget
 bindkey -M emacs '^f' fzf-file-widget

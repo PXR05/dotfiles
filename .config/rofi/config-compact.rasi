@@ -1,4 +1,3 @@
-/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 /* Main Config (compact) */
 
 @import "~/.config/rofi/config.rasi" 
@@ -10,8 +9,8 @@ configuration {
 
 /* ---- Window ---- */
 window {
-  width: 50%;
-  border-radius: 15px;
+  width: 40%;
+  border-radius: 16px;
 }
 
 /* ---- Inputbar ---- */
@@ -34,13 +33,13 @@ entry {
 /* ---- Listview ---- */
 listview {
   columns: 2;
-  lines: 5;
+  lines: 8;
   spacing: 4px;
   scrollbar: false;
-  border-radius: 12px;
+  border-radius: 8px;
 }
 
 /* ---- Element ---- */
 element {
-  border-radius: 10px;
+  border-radius: 8px;
 }

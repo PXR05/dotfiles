@@ -43,7 +43,7 @@ inc_volume() {
     if [ "$(pamixer --get-mute)" == "true" ]; then
         toggle_mute
     else
-        pamixer -i 1 --allow-boost --set-limit 150
+        pamixer -i 2 --allow-boost --set-limit 150
     fi
 }
 
@@ -52,7 +52,7 @@ dec_volume() {
     if [ "$(pamixer --get-mute)" == "true" ]; then
         toggle_mute
     else
-        pamixer -d 1
+        pamixer -d 2
     fi
 }
 
@@ -105,7 +105,7 @@ inc_mic_volume() {
     if [ "$(pamixer --default-source --get-mute)" == "true" ]; then
         toggle_mic
     else
-        pamixer --default-source -i 1
+        pamixer --default-source -i 2
     fi
 }
 
@@ -114,7 +114,7 @@ dec_mic_volume() {
     if [ "$(pamixer --default-source --get-mute)" == "true" ]; then
         toggle-mic
     else
-        pamixer --default-source -d 1
+        pamixer --default-source -d 2
     fi
 }
 
