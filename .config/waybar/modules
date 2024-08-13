@@ -157,7 +157,7 @@
 		"class<celluloid>": " ",
 		"class<Cider>": "󰎆 ",
 		"class<code-oss>": "󰨞 ",
-		"class<codium|codium-url-handler|VSCodium>": "󰨞 ",
+		"class<codium|codium-url-handler|VSCodium|vscode|code>": "󰨞 ",
 		"class<codeblocks>": "󰅩 ",
 		"class<mousepad>": " ",
 		"class<libreoffice-writer>": " ",
