@@ -37,7 +37,7 @@ yay -S pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumb
 ```
 #### packages
 ```sh
-yay -S bat bibata-cursor-theme-bin brightnessctl btop cliphist discord eza fastfetch firefox kitty neovim nwg-look pamixer ripgrep rofi-wayland swappy swaync swww thunar waybar wlogout zsh
+yay -S bat bibata-cursor-theme-bin brightnessctl btop cliphist discord eza fastfetch firefox kitty neovim nm-connection-editor nwg-look pamixer ripgrep rofi-wayland swappy swaync swww thunar waybar wlogout zsh
 ```
 
 ### external
@@ -51,17 +51,18 @@ rm Bibata-Modern-Ice.tar.gz
 ```
 #### font 
 ```sh
-wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \ &&
-cd ~/.local/share/fonts \ && 
-unzip JetBrainsMono.zip \ && 
-rm JetBrainsMono.zip \ && 
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip && \
+cd ~/.local/share/fonts && \
+unzip JetBrainsMono.zip && \
+rm JetBrainsMono.zip && \
 fc-cache -fv
 ```
 #### terminal
 ```sh
 curl -s https://ohmyposh.dev/install.sh | bash -s && \
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting && \
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.zsh/fast-syntax-highlighting && \
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions && \
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git ~/.zsh/zsh-autocomplete
 ```
 #### dev
 ```sh
