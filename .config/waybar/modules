@@ -165,35 +165,6 @@
 		"class<com.obsproject.Studio>": " "
 		}   
 },
-// for Camilla or Spanish
-"hyprland/workspaces#cam": {
-	"active-only":false,
-	"all-outputs": true,
-	"format": "{icon}",
-	"show-special": false,
-	"on-click": "activate",
-	"on-scroll-up": "hyprctl dispatch workspace e+1",
-	"on-scroll-down": "hyprctl dispatch workspace e-1",
-	"persistent-workspaces":{
-		"1": [],
-		"2": [],
-		"3": [],
-		"4": [],
-		"5": []
-	},
-		"format-icons": {
-		"1": "Uno",
-		"2": "Due",
-		"3": "Tre",
-		"4": "Quattro",
-		"5": "Cinque",
-		"6":"Sei",
-		"7":"Sette",
-		"8":"Otto",
-		"9":"Nove",
-		"10":"Dieci"
-	}	
-},
 // GROUP
 "group/motherboard": {
 	"orientation": "horizontal",
@@ -319,10 +290,10 @@
 },
 "clock": {
 	"interval": 1,
-    "format": " {:%I:%M %p}", // AM PM format
-    //"format": " {:%H:%M:%S}", // 24H
-	"format-alt": " {:%H:%M   %Y, %d %B, %A}",
-	"tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "format": "{:%I:%M %p}", // AM PM format
+    //"format": "{:%H:%M:%S}", // 24H
+	"format-alt": "{:%H:%M   %Y, %d %B, %A}",
+	"tooltip-format": "{:%d %B %Y}",
 	"calendar": {
 		"mode": "year",
 		"mode-mon-col": 3,
@@ -400,16 +371,10 @@
 },
 "hyprland/window": {
 	"format": "{}",
-	"max-length": 20,
+	"max-length": 80,
 	"separate-outputs": true,
 	"offscreen-css": true,
 	"offscreen-css-text": "(inactive)",
-	"rewrite": {
-		"(.*) — Mozilla Firefox": " $1",
-		"(.*) - fish": "> [$1]",
-		"(.*) - zsh": "> [$1]",
-		"(.*) - $term": "> [$1]",
-	},
 },
 "idle_inhibitor": {
 	"format": "{icon}",
@@ -482,6 +447,7 @@
 	"format-icons": [
 		"󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
 	],
+	"on-click": "nm-connection-editor",
 	"on-click-right": "nm-connection-editor"
 },
 "network#speed": {
@@ -500,6 +466,7 @@
 	"format-icons": [
 		"󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
 	],
+	"on-click": "nm-connection-editor",
 	"on-click-right": "nm-connection-editor"
 },
 "power-profiles-daemon": {
@@ -531,9 +498,9 @@
 			"Easy Effects Sink"
 		],
 	},
-	"scroll-step": 1,
-	"on-click": "~/.config/hypr/scripts/Volume.sh --toggle",
-	"on-click-right": "pavucontrol -t 3",
+	"scroll-step": 2,
+	"on-click-right": "~/.config/hypr/scripts/Volume.sh --toggle",
+	"on-click": "pavucontrol -t 3",
 	"on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
 	"on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
 	"tooltip-format": "{icon} {desc} | {volume}%",
@@ -669,7 +636,7 @@
 	"on-click-middle": "playerctl play-pause",
 	"on-click": "playerctl previous",
 	"on-click-right": "playerctl next",
-	"scroll-step": 5.0,
+	"scroll-step": 2.0,
 	"on-scroll-up": "~/.config/hypr/scripts/Volume.sh --inc",
 	"on-scroll-down": "~/.config/hypr/scripts/Volume.sh --dec",
 	"smooth-scrolling-threshold": 1,

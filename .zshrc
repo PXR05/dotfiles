@@ -48,7 +48,6 @@ export PATH="$PATH:/opt/nvim-linux64/bin"
 # plugins
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/omp/tokyo.omp.json)"
