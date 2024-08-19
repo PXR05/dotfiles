@@ -17,22 +17,18 @@ active_window_path="${dir}/${active_window_file}"
 notify_view() {
     if [[ "$1" == "active" ]]; then
         if [[ -e "${active_window_path}" ]]; then
-            ${notify_cmd_shot} "Screenshot of '${active_window_class}' Saved."
-            "${sDIR}/Sounds.sh" --screenshot
+            "Screenshot of '${active_window_class}' Saved."
         else
-            ${notify_cmd_shot} "Screenshot of '${active_window_class}' not Saved"
-            "${sDIR}/Sounds.sh" --error
+            "Screenshot of '${active_window_class}' not Saved"
         fi
     elif [[ "$1" == "swappy" ]]; then
-		${notify_cmd_shot} "Screenshot Captured."
+		"Screenshot Captured."
     else
         local check_file="$dir/$file"
         if [[ -e "$check_file" ]]; then
-            ${notify_cmd_shot} "Screenshot Saved."
-            "${sDIR}/Sounds.sh" --screenshot
+            "Screenshot Saved."
         else
-            ${notify_cmd_shot} "Screenshot NOT Saved."
-            "${sDIR}/Sounds.sh" --error
+            "Screenshot NOT Saved."
         fi
     fi
 }
@@ -51,27 +47,6 @@ countdown() {
 shotnow() {
 	cd ${dir} && grim - | tee "$file" | wl-copy
 	sleep 2
-	notify_view
-}
-
-shot5() {
-	countdown '5'
-	sleep 1 && cd ${dir} && grim - | tee "$file" | wl-copy
-	sleep 1
-	notify_view
-	
-}
-
-shot10() {
-	countdown '10'
-	sleep 1 && cd ${dir} && grim - | tee "$file" | wl-copy
-	notify_view
-}
-
-shotwin() {
-	w_pos=$(hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1)
-	w_size=$(hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g)
-	cd ${dir} && grim -g "$w_pos $w_size" - | tee "$file" | wl-copy
 	notify_view
 }
 
@@ -110,12 +85,6 @@ fi
 
 if [[ "$1" == "--now" ]]; then
 	shotnow
-elif [[ "$1" == "--in5" ]]; then
-	shot5
-elif [[ "$1" == "--in10" ]]; then
-	shot10
-elif [[ "$1" == "--win" ]]; then
-	shotwin
 elif [[ "$1" == "--area" ]]; then
 	shotarea
 elif [[ "$1" == "--active" ]]; then
@@ -123,7 +92,7 @@ elif [[ "$1" == "--active" ]]; then
 elif [[ "$1" == "--swappy" ]]; then
 	shotswappy
 else
-	echo -e "Available Options : --now --in5 --in10 --win --area --active --swappy"
+	echo -e "Available Options : --now --area --active --swappy"
 fi
 
 exit 0

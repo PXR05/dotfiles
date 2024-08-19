@@ -5,22 +5,22 @@
   	"layer": "overlay",
   	"control-center-layer": "top",
   	"layer-shell": true,
- 	  "cssPriority": "application",
+ 	  "cssPriority": "user",
     "control-center-margin-top": 8,
     "control-center-margin-bottom": 0,
     "control-center-margin-right": 8,
     "control-center-margin-left": 0,
   	"notification-2fa-action": true,
   	"notification-inline-replies": false,
-    "notification-icon-size": 24,
-    "notification-body-image-height": 100,
-    "notification-body-image-width": 200,
+    "notification-icon-size": 0,
+    "notification-body-image-height": 0,
+    "notification-body-image-width": 0,
     "timeout": 6,
     "timeout-low": 3,
     "timeout-critical": 0,
     "fit-to-screen": false,
     "control-center-width": 400,
-    "control-center-height": 700,
+    "control-center-height": 800,
     "notification-window-width": 400,
     "keyboard-shortcuts": true,
     "image-visibility": "when available",
@@ -40,8 +40,7 @@
             "text": "Notification"
         },
         "mpris": {
-            "image-size": 80,
-            "image-radius": 8
+            "image-size": 100
         },
         "volume": {
             "label": "󰕾"

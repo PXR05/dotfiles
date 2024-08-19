@@ -105,7 +105,7 @@
   background: transparent;
   color: @text-color;
   text-shadow: none;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .time {
@@ -117,6 +117,7 @@
 
 .body {
   font-size: 1rem;
+  margin-bottom: 4px;
   background: transparent;
   color: @text-color;
 }
@@ -154,24 +155,40 @@
 
 .widget-mpris {
   color: @text-color;
-  background: @accent;
-  /*margin: 0px 16px;*/
-  /*margin-bottom: 16px;*/
+  /*background: @accent;*/
+  margin: 4px 16px;
+  margin-bottom: 16px;
   border-radius: 8px;
+}
+
+.widget-mpris * {
+  box-shadow: none;
 }
 
 .widget-mpris > box > button {
-  border-radius: 4px;
-  background: @text-color;
-  margin: 64px 4px;
-  padding: 0px 4px;
+  color: @text-color;
+  border: 2px solid @accent;
+  border-radius: 8px;
+  margin: 0px;
+}
+
+.widget-mpris button {
+  color: alpha(@text-color, 0.6);
+}
+
+.widget-mpris button:hover {
+  color: @text-color;
 }
 
 .widget-mpris-player {
-  padding: 4px;
-  margin: 24px 0px;
   border-radius: 8px;
-  color: @accent;
+  background: @accent;
+  color: @text-color;
+  margin: 0px 16px;
+}
+
+.widget-mpris-album-art {
+  border-radius: 4px;
 }
 
 .widget-mpris-title {

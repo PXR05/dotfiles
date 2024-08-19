@@ -37,7 +37,7 @@ yay -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontr
 ```
 #### packages
 ```sh
-yay -S --noconfirm bat bibata-cursor-theme-bin brightnessctl btop cliphist discord eza fastfetch firefox kitty neovim nm-connection-editor nwg-look obs-studio pamixer ripgrep rofi-wayland swappy swaync swww thunar ttf-nerd-fonts-symbols waybar wlogout zsh
+yay -S --noconfirm bat bibata-cursor-theme-bin blueman brightnessctl btop cliphist discord eza fastfetch firefox kitty neovim nm-connection-editor nwg-look obs-studio pamixer ripgrep rofi-wayland swappy swaync swww thunar ttf-nerd-fonts-symbols waybar wlogout zsh
 ```
 
 ### external
