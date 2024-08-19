@@ -38,7 +38,7 @@ yay -S pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumb
 yay -S bat bibata-cursor-theme-bin brightnessctl btop cliphist discord eza fastfetch firefox kitty neovim nwg-look pamixer ripgrep rofi-wayland swappy swaync swww thunar waybar wlogout zsh
 ```
 
-### curl
+### external
 #### cursor
 ```sh
 mkdir -p ~/.local/share/icons/Bibata-Modern-Ice && \
@@ -46,6 +46,14 @@ cd ~/.local/share/icons/Bibata-Modern-Ice && \
 curl -L https://github.com/LOSEARDES77/Bibata-Cursor-hyprcursor/releases/download/1.0/hypr_Bibata-Modern-Ice.tar.gz > Bibata-Modern-Ice.tar.gz && \
 tar -xzf Bibata-Modern-Ice.tar.gz && \
 rm Bibata-Modern-Ice.tar.gz
+```
+#### font 
+```sh
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip \ &&
+cd ~/.local/share/fonts \ && 
+unzip JetBrainsMono.zip \ && 
+rm JetBrainsMono.zip \ && 
+fc-cache -fv
 ```
 #### terminal
 ```sh
