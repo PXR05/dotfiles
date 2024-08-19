@@ -39,6 +39,14 @@ yay -S bat brightnessctl btop discord eza fastfetch firefox kitty neovim nwg-loo
 ```
 
 ### curl
+#### cursor
+```sh
+mkdir -p ~/.local/share/icons/Bibata-Modern-Ice && \
+cd ~/.local/share/icons/Bibata-Modern-Ice && \
+curl -L https://github.com/LOSEARDES77/Bibata-Cursor-hyprcursor/releases/download/1.0/hypr_Bibata-Modern-Ice.tar.gz > Bibata-Modern-Ice.tar.gz && \
+tar -xzf Bibata-Modern-Ice.tar.gz && \
+rm Bibata-Modern-Ice.tar.gz
+```
 #### terminal
 ```sh
 curl -s https://ohmyposh.dev/install.sh | bash -s && \
