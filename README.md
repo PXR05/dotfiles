@@ -7,6 +7,8 @@ git clone https://github.com/PXR05/dotfiles.git
 cd dotfiles
 cp -f .zshrc ~
 cp -rf .config/* ~/.config
+cp -rf .themes ~
+cp -rf .local ~
 ```
 
 ## Packages
