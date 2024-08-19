@@ -31,11 +31,11 @@ yay -S hyprland hyprlock xdg-desktop-portal-hyprland xorg-xwayland qt5-wayland q
 ```
 #### pipewire
 ```sh
-pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumber
+yay -S pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumber
 ```
 #### packages
 ```sh
-bat brightnessctl btop discord eza fastfetch firefox kitty neovim ripgrep rofi-wayland swappy swaync swww waybar wlogout zsh
+yay -S bat brightnessctl btop discord eza fastfetch firefox kitty neovim ripgrep rofi-wayland swappy swaync swww waybar wlogout zsh
 ```
 
 ### curl
