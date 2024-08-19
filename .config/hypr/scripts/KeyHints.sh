@@ -36,7 +36,7 @@ yad --width=$dynamic_width --height=$dynamic_height \
     --column=* \
     --timeout-indicator=bottom \
 " Enter" "Terminal" "(kitty)" \
-" D" "App Launcher" "(rofi-wayland)" \
+" Space" "App Launcher" "(rofi-wayland)" \
 " T" "Open File Manager" "(Thunar)" \
 " Q" "Close active window" "" \
 " Shift Q " "Kill active window" "" \
