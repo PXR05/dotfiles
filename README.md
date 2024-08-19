@@ -35,7 +35,7 @@ yay -S pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumb
 ```
 #### packages
 ```sh
-yay -S bat bibata-cursor-theme-bin brightnessctl btop cliphist discord eza fastfetch firefox kitty neovim nwg-look ripgrep rofi-wayland swappy swaync swww thunar waybar wlogout zsh
+yay -S bat bibata-cursor-theme-bin brightnessctl btop cliphist discord eza fastfetch firefox kitty neovim nwg-look pamixer ripgrep rofi-wayland swappy swaync swww thunar waybar wlogout zsh
 ```
 
 ### curl
