@@ -155,7 +155,7 @@
 
 .widget-mpris {
   color: @text-color;
-  /*background: @accent;*/
+  background: @accent;
   margin: 4px 16px;
   margin-bottom: 16px;
   border-radius: 8px;
