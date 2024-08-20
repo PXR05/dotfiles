@@ -29,7 +29,7 @@ cp -rf .local ~
 ### yay
 #### hyprland
 ```sh
-yay -S --noconfirm hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct libva libva-nvidia-driver-git linux-headers 
+yay -S --noconfirm hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct libva libva-nvidia-driver-git linux-headers polkit-gnome 
 ```
 #### pipewire
 ```sh
@@ -37,7 +37,7 @@ yay -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontr
 ```
 #### packages
 ```sh
-yay -S --noconfirm bat bibata-cursor-theme-bin blueman brightnessctl btop cliphist discord eza fastfetch firefox kitty neovim nm-connection-editor nwg-look obs-studio pamixer ripgrep rofi-wayland swappy swaync swww thunar ttf-nerd-fonts-symbols waybar wlogout zsh
+yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist discord eza fastfetch firefox grim slurp kitty neovim nm-connection-editor nwg-look obs-studio pamixer ripgrep rofi-wayland swappy swaync swww thunar ttf-nerd-fonts-symbols visual-studio-code-bin vlc waybar wlogout zsh
 ```
 
 ### external

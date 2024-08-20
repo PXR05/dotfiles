@@ -139,7 +139,7 @@
 	"on-scroll-down": "hyprctl dispatch workspace e-1",
 	"format": "{icon} {windows}",
 	"format-window-separator": " ",
-	"window-rewrite-default": " ",
+	"window-rewrite-default": "󰘔 ",
 	"window-rewrite": {
 		"title<.*youtube.*>": " ",
 		"title<.*amazon.*>": " ",
