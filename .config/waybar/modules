@@ -150,7 +150,7 @@
 		"class<firefox>": " ",
 		"class<kitty>": " ",
 		"class<konsole>": " ",
-		"class<thunar>": "󰝰 ",
+		"class<thunar|nautilus|dolphin>": "󰝰 ",
 		"class<discord>": " ",
 		"class<WebCord>": " ",
 		"class<subl>": "󰅳 ",

@@ -33,7 +33,7 @@ entry {
 /* ---- Listview ---- */
 listview {
   columns: 2;
-  lines: 8;
+  lines: 7;
   spacing: 4px;
   scrollbar: false;
   border-radius: 8px;
