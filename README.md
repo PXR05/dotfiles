@@ -57,6 +57,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 ```
 #### dev
 ```sh
+curl -fsSL https://bun.sh/install | bash && \
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
 nvm install 20

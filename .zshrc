@@ -34,6 +34,7 @@ alias goto-hypr="cd ~/.config/hypr/"
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey '^H' backward-kill-word
+bindkey "^[[3~" delete-char
 
 # env
 export CODE="$HOME/Documents/code"
@@ -70,3 +71,6 @@ bindkey -M vicmd '^f' fzf-file-widget
 bindkey -M viins '^f' fzf-file-widget
 
 alias config='/usr/bin/git --git-dir=/home/pxr/.cfg/ --work-tree=/home/pxr'
+
+# bun completions
+[ -s "/home/pxr/.bun/_bun" ] && source "/home/pxr/.bun/_bun"
