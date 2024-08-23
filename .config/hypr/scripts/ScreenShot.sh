@@ -3,7 +3,7 @@
 
 iDIR="$HOME/.config/swaync/icons"
 sDIR="$HOME/.config/hypr/scripts"
-notify_cmd_shot="notify-send -h string:x-canonical-private-synchronous:shot-notify -u low -i ${iDIR}/picture.png"
+notify_cmd_shot="notify-send -h string:x-canonical-private-synchronous:shot-notify -u low"
 
 time=$(date "+%d-%b_%H-%M-%S")
 dir="$(xdg-user-dir)/Pictures/Screenshots"
@@ -17,18 +17,18 @@ active_window_path="${dir}/${active_window_file}"
 notify_view() {
     if [[ "$1" == "active" ]]; then
         if [[ -e "${active_window_path}" ]]; then
-            "Screenshot of '${active_window_class}' Saved."
+            ${notify_cmd_shot} "Screenshot of '${active_window_class}' Saved."
         else
-            "Screenshot of '${active_window_class}' not Saved"
+            ${notify_cmd_shot} "Screenshot of '${active_window_class}' not Saved"
         fi
     elif [[ "$1" == "swappy" ]]; then
-		"Screenshot Captured."
+		${notify_cmd_shot} "Screenshot Captured."
     else
         local check_file="$dir/$file"
         if [[ -e "$check_file" ]]; then
-            "Screenshot Saved."
+            ${notify_cmd_shot} "Screenshot Saved."
         else
-            "Screenshot NOT Saved."
+            ${notify_cmd_shot} "Screenshot NOT Saved."
         fi
     fi
 }
@@ -47,6 +47,27 @@ countdown() {
 shotnow() {
 	cd ${dir} && grim - | tee "$file" | wl-copy
 	sleep 2
+	notify_view
+}
+
+shot5() {
+	countdown '5'
+	sleep 1 && cd ${dir} && grim - | tee "$file" | wl-copy
+	sleep 1
+	notify_view
+	
+}
+
+shot10() {
+	countdown '10'
+	sleep 1 && cd ${dir} && grim - | tee "$file" | wl-copy
+	notify_view
+}
+
+shotwin() {
+	w_pos=$(hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1)
+	w_size=$(hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g)
+	cd ${dir} && grim -g "$w_pos $w_size" - | tee "$file" | wl-copy
 	notify_view
 }
 
@@ -85,6 +106,12 @@ fi
 
 if [[ "$1" == "--now" ]]; then
 	shotnow
+elif [[ "$1" == "--in5" ]]; then
+	shot5
+elif [[ "$1" == "--in10" ]]; then
+	shot10
+elif [[ "$1" == "--win" ]]; then
+	shotwin
 elif [[ "$1" == "--area" ]]; then
 	shotarea
 elif [[ "$1" == "--active" ]]; then
@@ -92,7 +119,7 @@ elif [[ "$1" == "--active" ]]; then
 elif [[ "$1" == "--swappy" ]]; then
 	shotswappy
 else
-	echo -e "Available Options : --now --area --active --swappy"
+	echo -e "Available Options : --now --in5 --in10 --win --area --active --swappy"
 fi
 
 exit 0

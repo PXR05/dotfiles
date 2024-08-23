@@ -18,18 +18,21 @@
 }
 
 .notification-row {
-  background-color: transparent;
+  background-color: @accent;
   box-shadow: none;
   outline: none;
   margin: 8px 16px;
+  border-radius: 8px;
   padding: 0px;
   color: @text-color;
 }
 
 .notification-row .notification-background {
   color: @text-color;
-  background-color: transparent;
+  background-color: @accent;
+  border-radius: 8px;
   box-shadow: none;
+  border: 0px solid @border-color;
 }
 
 .notification {
@@ -37,6 +40,7 @@
   border-radius: 8px;
   box-shadow: none;
   margin: 0px;
+  border: 0px solid @border-color;
 }
 
 .notification-content {
@@ -61,7 +65,7 @@
 }
 
 .notification-action {
-  border: 1px solid @border-color;
+  border: 0px solid @border-color;
   border-top: none;
   border-radius: 8px;
   color: @text-color;
