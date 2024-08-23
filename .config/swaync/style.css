@@ -21,9 +21,9 @@
   background-color: @accent;
   box-shadow: none;
   outline: none;
-  margin: 8px 16px;
+  margin: 8px;
   border-radius: 8px;
-  padding: 0px;
+  padding: 8px 0px;
   color: @text-color;
 }
 
@@ -41,16 +41,17 @@
   box-shadow: none;
   margin: 0px;
   border: 0px solid @border-color;
+  background: @accent;
 }
 
 .notification-content {
   color: @text-color;
   background: @accent;
   box-shadow: none;
-  padding: 8px;
+  padding: 0px;
   border-radius: 8px;
   border: 0px solid @border-color;
-  margin-top: 0px;
+  margin-left: 0px;
 }
 
 .notification-default-action {
@@ -58,6 +59,7 @@
   padding: 0;
   border-radius: 8px;
   box-shadow: none;
+  background: @accent;
 }
 
 .close-button {
@@ -66,6 +68,7 @@
 
 .notification-action {
   border: 0px solid @border-color;
+  background: @accent;
   border-top: none;
   border-radius: 8px;
   color: @text-color;
@@ -100,7 +103,7 @@
 .body-image {
   margin-top: 6px;
   color: @light;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .summary {
@@ -110,6 +113,7 @@
   color: @text-color;
   text-shadow: none;
   margin-bottom: 8px;
+  margin-left: 8px;
 }
 
 .time {
@@ -122,6 +126,7 @@
 .body {
   font-size: 1rem;
   margin-bottom: 4px;
+  margin-left: 8px;
   background: transparent;
   color: @text-color;
 }
