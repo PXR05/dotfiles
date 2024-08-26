@@ -147,6 +147,7 @@
     "title<.*_crx_.*>": " ",
 		"title<.*Picture-in-Picture.*>": " ",
     "class<steam>": " ",
+    "class<spotify>": " ",
     "class<brave>": " ",
 		"class<firefox>": " ",
 		"class<kitty|alacritty>": " ",
@@ -372,7 +373,7 @@
 },
 "hyprland/window": {
 	"format": "{}",
-	"max-length": 80,
+	"max-length": 0,
 	"separate-outputs": true,
 	"offscreen-css": true,
 	"offscreen-css-text": "(inactive)",
