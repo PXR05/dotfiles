@@ -29,7 +29,6 @@
 
 .notification-row .notification-background {
   color: @text-color;
-  background-color: @accent;
   border-radius: 8px;
   box-shadow: none;
   border: 0px solid @border-color;
@@ -41,7 +40,6 @@
   box-shadow: none;
   margin: 0px;
   border: 0px solid @border-color;
-  background: @accent;
 }
 
 .notification-content {
@@ -59,7 +57,6 @@
   padding: 0;
   border-radius: 8px;
   box-shadow: none;
-  background: @accent;
 }
 
 .close-button {
@@ -77,12 +74,12 @@
 .notification-default-action:hover,
 .notification-action:hover {
   color: @text-color;
-  background: transparent;
 }
 
 .notification-default-action {
   border-radius: 8px;
   margin: 4px;
+  background: transparent;
 }
 
 .notification-default-action:not(:only-child) {
@@ -109,7 +106,6 @@
 .summary {
   font-size: 1rem;
   font-weight: bold;
-  background: transparent;
   color: @text-color;
   text-shadow: none;
   margin-bottom: 8px;
@@ -119,7 +115,6 @@
 .time {
   font-size: 1rem;
   font-weight: bold;
-  background: transparent;
   color: @text-color;
 }
 
@@ -127,7 +122,6 @@
   font-size: 1rem;
   margin-bottom: 4px;
   margin-left: 8px;
-  background: transparent;
   color: @text-color;
 }
 
@@ -166,7 +160,7 @@
   color: @text-color;
   background: @accent;
   margin: 4px 16px;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
   border-radius: 8px;
 }
 

@@ -35,9 +35,13 @@ yay -S --noconfirm hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland xorg
 ```sh
 yay -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumber
 ```
-#### packages
+#### core
 ```sh
-yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist discord eza fastfetch firefox grim jq kitty neovim nm-connection-editor nwg-look obs-studio pamixer ripgrep rofi-wayland spotify slurp swappy swaync swww thunar ttf-nerd-fonts-symbols visual-studio-code-bin vlc waybar wlogout zsh
+yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch firefox grim jq kitty neovim nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp swappy swaync swww thunar ttf-nerd-fonts-symbols vlc waybar wlogout zsh
+```
+#### extra
+```sh
+yay -S --noconfirm discord lutris obsidian obs-studio spotify steam visual-studio-code-bin wine winetricks
 ```
 
 ### external
@@ -61,7 +65,7 @@ curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 curl -fsSL https://bun.sh/install | bash && \
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && \
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
-nvm install 20
+nvm install lastest
 ```
 ### cargo
 ```sh
