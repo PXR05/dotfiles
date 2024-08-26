@@ -37,11 +37,15 @@ yay -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontr
 ```
 #### core
 ```sh
-yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch firefox grim jq kitty neovim nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp swappy swaync swww thunar ttf-nerd-fonts-symbols vlc waybar wlogout zsh
+yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch firefox grim jq kitty nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp swappy swaync swww thunar ttf-nerd-fonts-symbols vlc waybar wlogout zsh
+```
+#### dev
+```sh
+yay -S bun composer go neovim nodejs npm php visual-studio-code-bin
 ```
 #### extra
 ```sh
-yay -S --noconfirm discord lutris obsidian obs-studio spotify steam visual-studio-code-bin wine winetricks
+yay -S --noconfirm discord lutris obsidian obs-studio spotify steam wine winetricks
 ```
 
 ### external
@@ -60,14 +64,8 @@ git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ~/.z
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions && \
 curl -fsSL https://raw.githubusercontent.com/spicetify/cli/main/install.sh | sh
 ```
-#### dev
+#### rust
 ```sh
-curl -fsSL https://bun.sh/install | bash && \
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && \
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
-nvm install lastest
-```
-### cargo
-```sh
 cargo install wallust
 ```
