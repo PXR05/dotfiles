@@ -160,7 +160,7 @@
 		"class<Cider>": "󰎆 ",
 		"class<code-oss>": "󰨞 ",
 		"class<codium|codium-url-handler|VSCodium|vscode|code>": "󰨞 ",
-		"class<codeblocks>": "󰅩 ",
+		"class<codeblocks|zed>": "󰅩 ",
 		"class<mousepad>": " ",
 		"class<libreoffice-writer>": " ",
 		"class<libreoffice-startcenter>": "󰏆 ",
