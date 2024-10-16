@@ -8,9 +8,9 @@
 "exclusive": true,
 "passthrough": false,
 "gtk-layer-shell": true,
-"margin-left": 12,
-"margin-right": 12,
-"margin-top": 12,
+"margin-left": 4,
+"margin-right": 4,
+"margin-top": 4,
 
 "modules-left": [
 	"hyprland/workspaces#rw",

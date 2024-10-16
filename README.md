@@ -1,16 +1,10 @@
 # .dotfiles
----
 
-## Usage
 ```sh
 git clone https://github.com/PXR05/dotfiles.git
 cd dotfiles
-cp -f .zshrc ~
-cp -rf .config/* ~/.config
-cp -rf .themes ~
-cp -rf .local ~
+cp -rf . ~
 ```
-
 ## Packages
 - **btop** (Resource Monitor)
 - **fastfetch** (System Info)
@@ -24,6 +18,7 @@ cp -rf .local ~
 - **wallust** (Palette Generator)
 - **waybar** (Status Bar)
 - **wlogout** (Logout Menu)
+- **zen-browser (Web Browser)**
 - **zsh** (Shell)
   
 ### yay
@@ -45,7 +40,7 @@ yay -S bun composer go neovim nodejs npm php visual-studio-code-bin
 ```
 #### extra
 ```sh
-yay -S --noconfirm discord lutris obsidian obs-studio spotify steam wine winetricks
+yay -S --noconfirm discord lutris obsidian obs-studio spotify steam wine winetricks zen-browser-avx2-bin
 ```
 
 ### external

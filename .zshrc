@@ -39,10 +39,12 @@ export CODE="$HOME/Documents/code"
 export WLR_NO_HARDWARE_CURSORS=1
 export FZF_DEFAULT_OPTS='--height 50% --layout reverse --border --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 export FZF_CTRL_R_OPTS='--preview ""'
+export JAVA_HOME="$HOME/.jdks/corretto-18.0.2"
 export PATH=/home/pxr/.spicetify:$PATH
 export PATH=/home/pxr/.local/bin:$PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH=/home/pxr/flutter:$PATH
 
 # plugins
 source ~/.zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
