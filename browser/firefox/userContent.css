@@ -1,5 +1,5 @@
-
-:root, * {
+:root,
+* {
     --in-content-page-background: black !important;
     --box-background-color: #121212 !important;
     --in-content-table-background: #121212 !important;
@@ -26,7 +26,10 @@ option {
 }
 
 @-moz-document url-prefix(youtube) {
-    ytd-watch-flexy[flexy]:not([full-bleed-player][full-bleed-no-max-width-columns]) #columns.ytd-watch-flexy {
+    ytd-watch-flexy[flexy]:not(
+            [full-bleed-player][full-bleed-no-max-width-columns]
+        )
+        #columns.ytd-watch-flexy {
         max-width: auto !important;
     }
 }
@@ -38,7 +41,7 @@ option {
     }
 }
 
-@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) { 
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
     * {
         font-family: monospace !important;
     }
@@ -48,19 +51,17 @@ option {
         --newtab-background-color-secondary: rgb(18, 18, 18) !important;
         font-family: monospace !important;
     }
-    
 
     main section {
-	    margin-bottom: 0 !important;
+        margin-bottom: 0 !important;
     }
-    
 
     body {
         font-family: monospace !important;
-	    --newtab-search-icon: url() !important;
-        
+        --newtab-search-icon: url() !important;
+
         background-color: transparent !important;
-        
+
         &::before {
             content: "";
             z-index: -1;
@@ -74,39 +75,47 @@ option {
             height: 100vh;
         }
     }
-    
-    .search-inner-wrapper, 
+
+    .search-inner-wrapper,
     .logo-and-wordmark {
         display: none !important;
     }
-    
+
     .info {
         background-image: none !important;
         padding: 20px !important;
         margin-top: 0 !important;
     }
-    
-    .outer-wrapper .ds-top-sites .top-sites .top-site-outer .top-site-inner > a:is(.active, :focus) .tile {
-	    box-shadow: 0 0 0 0 var(--newtab-primary-action-background) !important;
+
+    .outer-wrapper
+        .ds-top-sites
+        .top-sites
+        .top-site-outer
+        .top-site-inner
+        > a:is(.active, :focus)
+        .tile {
+        box-shadow: 0 0 0 0 var(--newtab-primary-action-background) !important;
     }
-    
-    .click-target-container *, .top-sites-list * {
+
+    .click-target-container *,
+    .top-sites-list * {
         color: #fff !important;
     }
-    
+
     .ds-outer-wrapper-breakpoint-override main {
         width: auto !important;
     }
-    
+
     .outer-wrapper.ds-outer-wrapper-breakpoint-override {
         padding: 0 !important;
     }
-    
+
     .personalize-button {
         opacity: 0 !important;
     }
-    
-    .personalize-button:hover, .personalize-button:active {
+
+    .personalize-button:hover,
+    .personalize-button:active {
         opacity: 0.5 !important;
         background-color: rgba(255, 255, 255, 0.1) !important;
         backdrop-filter: blur(2rem) !important;
@@ -119,27 +128,29 @@ option {
         column-gap: 2em;
         row-gap: 6em;
     }
-    
+
     .top-sites-list .hide-for-narrow {
         display: inline-block !important;
     }
 
-    .top-sites-list:not(.dnd-active) .top-site-outer:is(.active, :focus, :hover) .tile {
+    .top-sites-list:not(.dnd-active)
+        .top-site-outer:is(.active, :focus, :hover)
+        .tile {
         border: 1.5px solid var(--newtab-primary-action-background);
     }
 
     .top-site-inner {
         height: 100% !important;
     }
-    
+
     .sponsored-label {
         display: none !important;
     }
-    
+
     .collapsible-section {
         padding: 0 !important;
     }
-    
+
     .top-site-button {
         display: flex !important;
         flex-direction: column;
@@ -147,7 +158,7 @@ option {
         height: 3em !important;
         background-color: transparent !important;
     }
-    
+
     .top-site-outer {
         position: relative;
         height: fit-content !important;
@@ -155,11 +166,11 @@ option {
         padding: 0 !important;
         border-radius: 0 !important;
     }
-    
+
     .top-site-outer .top-site-icon {
         background-color: transparent !important;
     }
-    
+
     .top-site-outer .tile {
         display: none !important;
         width: fit-content !important;
@@ -170,20 +181,20 @@ option {
         border: none !important;
         border-radius: none !important;
     }
-    
+
     .top-site-outer .title span {
         color: #babed8 !important;
         font-size: 1.25em !important;
         width: 8em !important;
     }
-    
+
     .top-site-outer .title {
         padding-bottom: 0.5em;
         transition: all 0.15s ease-out;
         border-bottom: 1px solid transparent;
         letter-spacing: 0.1em;
     }
-    
+
     .top-site-outer:hover {
         background: none !important;
         .title {
@@ -193,7 +204,7 @@ option {
             }
         }
     }
-    
+
     .top-site-outer .context-menu-button {
         inset-inline-end: 0 !important;
         height: 100% !important;
@@ -201,43 +212,43 @@ option {
         right: 8px !important;
         opacity: 0 !important;
     }
-    
+
     .top-site-outer .context-menu-button:is(:active, :focus) {
         background-color: transparent !important;
     }
-       
+
     .context-menu {
         font-size: 11px !important;
         padding: 6px !important;
         border-radius: 8px !important;
     }
-    
+
     .context-menu > ul {
         display: flex !important;
         flex-direction: column;
         gap: 4px;
         padding: 3px 2px !important;
     }
-    
+
     .context-menu > ul button {
         border-radius: 4px !important;
     }
-    
+
     .context-menu .separator {
         margin: 4px auto !important;
         width: 90% !important;
     }
-    
+
     .icon.icon-pin-small {
         display: none !important;
     }
 
     .non-collapsible-section {
-	    display: none;
+        display: none;
     }
 
     .search-wrapper input {
-    	border-width: 1.5px !important;
+        border-width: 1.5px !important;
         background-color: rgba(0, 0, 0, 0) !important;
         backdrop-filter: blur(1rem) !important;
         color: #fff !important;
@@ -246,13 +257,14 @@ option {
     }
 
     .search-wrapper input::placeholder {
-	    color: rgba(255, 255, 255, 0.5) !important;
+        color: rgba(255, 255, 255, 0.5) !important;
         opacity: 1 !important;
     }
 
-    .search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
-	    border-width: 1.5px !important;
-	    box-shadow: 0 0 0 0 transparent !important;
+    .search-wrapper .search-inner-wrapper:active input,
+    .search-wrapper input:focus {
+        border-width: 1.5px !important;
+        box-shadow: 0 0 0 0 transparent !important;
     }
 
     .search-wrapper .search-button {
@@ -261,7 +273,7 @@ option {
     }
 
     .search-wrapper .logo-and-wordmark {
-	    display: none !important;
+        display: none !important;
     }
 
     .customize-menu {
@@ -271,23 +283,24 @@ option {
     }
 
     .customize-menu .close-button {
-	    color: rgba(255, 255, 255, 0.8) !important;
+        color: rgba(255, 255, 255, 0.8) !important;
     }
-    
+
     .home-section .section .sponsored-checkbox {
-	    background-color: rgba(255, 255, 255, 0.25) !important;
+        background-color: rgba(255, 255, 255, 0.25) !important;
     }
 
     .home-section .section .sponsored-checkbox:checked {
-	    fill: rgba(255, 255, 255, 0.8) !important;
+        fill: rgba(255, 255, 255, 0.8) !important;
     }
 
     .toggle-button {
-    	--toggle-dot-background-color-on-pressed: rgba(0, 0, 0, 0.7) !important;
+        --toggle-dot-background-color-on-pressed: rgba(0, 0, 0, 0.7) !important;
     }
 
-    .toggle-button[aria-pressed="true"], .toggle-button[aria-pressed="true"]:enabled:hover {
-	    background-color: rgba(255, 255, 255, 0.75) !important;
+    .toggle-button[aria-pressed="true"],
+    .toggle-button[aria-pressed="true"]:enabled:hover {
+        background-color: rgba(255, 255, 255, 0.75) !important;
     }
 
     .home-section .section .selector {
@@ -297,11 +310,11 @@ option {
         border-color: transparent !important;
         fill: rgba(255, 255, 255, 0.8) !important;
     }
-    
+
     #mainPopupSet menupopup {
-      --panel-background: rgb(18, 18, 18) !important;
+        --panel-background: rgb(18, 18, 18) !important;
     }
-    
+
     @media (max-width: 768px) {
         .top-sites-list {
             grid-template-columns: 1fr 1fr;
@@ -311,4 +324,3 @@ option {
         }
     }
 }
-
