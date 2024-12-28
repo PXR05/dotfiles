@@ -70,7 +70,7 @@ bindkey -M emacs '^f' fzf-file-widget
 bindkey -M vicmd '^f' fzf-file-widget
 bindkey -M viins '^f' fzf-file-widget
 
-alias config='/usr/bin/git --git-dir=/home/pxr/.cfg/ --work-tree=/home/pxr'
+alias cfg='/usr/bin/git --git-dir=/home/pxr/.cfg/ --work-tree=/home/pxr'
 
 # bun completions
 [ -s "/home/pxr/.bun/_bun" ] && source "/home/pxr/.bun/_bun"

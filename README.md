@@ -32,7 +32,7 @@ yay -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontr
 ```
 #### core
 ```sh
-yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch firefox grim jq kitty nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp swappy swaync swww thunar ttf-nerd-fonts-symbols vlc waybar wlogout zsh
+yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch grim jq kitty nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp swappy swaync swww thunar ttf-nerd-fonts-symbols vlc waybar wlogout zen-browser-bin zsh
 ```
 #### dev
 ```sh
@@ -40,7 +40,7 @@ yay -S bun composer go neovim nodejs npm php visual-studio-code-bin
 ```
 #### extra
 ```sh
-yay -S --noconfirm discord lutris obsidian obs-studio spotify steam wine winetricks zen-browser-avx2-bin
+yay -S --noconfirm discord lutris obsidian obs-studio spotify steam wine winetricks
 ```
 
 ### external
