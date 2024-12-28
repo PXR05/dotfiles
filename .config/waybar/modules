@@ -149,7 +149,7 @@
     "class<steam>": " ",
     "class<spotify>": " ",
     "class<brave>": " ",
-		"class<firefox>": " ",
+		"class<firefox|zen browser>": " ",
 		"class<kitty|alacritty>": " ",
 		"class<konsole>": " ",
 		"class<thunar|nautilus|dolphin>": "󰝰 ",
