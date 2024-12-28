@@ -28,6 +28,8 @@ alias edit-rofi="nvim ~/.config/rofi/master-config.rasi"
 alias goto-nvim="cd ~/.config/nvim/lua/"
 alias goto-rofi="cd ~/.config/rofi/"
 alias goto-hypr="cd ~/.config/hypr/"
+alias fsize="sudo du -xsh --exclude=/{proc,sys,dev,run} * | sort -h"
+alias fsizeall="sudo du -xh --exclude=/{proc,sys,dev,run} * | sort -h"
 
 # binds
 bindkey "^[[1;5C" forward-word

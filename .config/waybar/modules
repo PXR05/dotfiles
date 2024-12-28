@@ -150,7 +150,7 @@
     "class<spotify>": " ",
     "class<brave>": " ",
 		"class<firefox|zen browser>": " ",
-		"class<kitty|alacritty>": " ",
+		"class<kitty|alacritty|konsole|com.mitchellh.ghostty>": " ",
 		"class<konsole>": " ",
 		"class<thunar|nautilus|dolphin>": "󰝰 ",
 		"class<discord>": " ",
