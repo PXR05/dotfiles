@@ -22,6 +22,7 @@ alias air='$(go env GOPATH)/bin/air'
 alias edit-zsh="nvim ~/.zshrc"
 alias edit-posh="nvim ~/.config/omp/tokyo.omp.json"
 alias edit-kitty="nvim ~/.config/kitty/kitty.conf"
+alias edit-ghostty="nvim ~/.config/ghostty/config"
 alias edit-nf="nvim ~/.config/fastfetch/config-compact.jsonc"
 alias edit-rofi="nvim ~/.config/rofi/master-config.rasi"
 alias goto-nvim="cd ~/.config/nvim/lua/"

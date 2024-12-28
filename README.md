@@ -9,7 +9,7 @@ cp -rf . ~
 - **btop** (Resource Monitor)
 - **fastfetch** (System Info)
 - **hyprland** (Window Manager)
-- **kitty** (Terminal Emulator)
+- **ghostty** (Terminal Emulator)
 - **oh-my-posh** (Prompt Theme)
 - **rofi-wayland** (Launcher)
 - **swappy** (Screenshot)
@@ -32,11 +32,11 @@ yay -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontr
 ```
 #### core
 ```sh
-yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch grim jq kitty nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp swappy swaync swww thunar ttf-nerd-fonts-symbols vlc waybar wlogout zen-browser-bin zsh
+yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch ghostty grim jq nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp swappy swaync swww thunar ttf-nerd-fonts-symbols vlc waybar wlogout zen-browser-bin zsh
 ```
 #### dev
 ```sh
-yay -S bun composer go neovim nodejs npm php visual-studio-code-bin
+yay -S bun composer go neovim nodejs npm php visual-studio-code-bin zed
 ```
 #### extra
 ```sh
