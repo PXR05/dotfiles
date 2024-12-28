@@ -2,7 +2,11 @@
   color: #d9d9da;
   letter-spacing: 0.1px !important;
   --base-radius: 6px;
-  --base-primary-color: color-mix(in srgb, var(--zen-primary-color) 50%,  #d9d9da);
+  --base-primary-color: color-mix(
+    in srgb,
+    var(--zen-primary-color) 50%,
+    #d9d9da
+  );
   --tabpanel-background-color: transparent !important;
   --base-white: #d9d9da;
 }
@@ -28,26 +32,32 @@
 }
 
 #zen-current-workspace-indicator {
-  font-weight: 500 !important;;
+  font-weight: 500 !important;
   padding-top: 20px !important;
   padding-bottom: 10px !important;
 }
 
 browser {
   border-radius: 6px !important;
-  background: color-mix(in srgb, var(--base-primary-color) 10%, transparent) !important; 
+  background: color-mix(
+    in srgb,
+    var(--base-primary-color) 10%,
+    transparent
+  ) !important;
 }
 
 #zen-appcontent-navbar-container {
-  transition: height 0.1s ease-out, opacity 0.1s ease-out !important;
+  transition:
+    height 0.1s ease-out,
+    opacity 0.1s ease-out !important;
   transition-delay: 0s !important;
-  
+
   &[zen-has-hover="true"] {
     transition-delay: 0.25s !important;
   }
 }
 
-#tabbrowser-arrowscrollbox, 
+#tabbrowser-arrowscrollbox,
 #vertical-pinned-tabs-container {
   tab {
     margin-block: 2px !important;
@@ -61,7 +71,7 @@ browser {
 #tabs-newtab-button {
   color: #868686 !important;
   font-size: 1.1rem !important;
-  
+
   .toolbarbutton-icon {
     opacity: 0.53;
   }
@@ -69,7 +79,10 @@ browser {
 
 #vertical-pinned-tabs-container-separator {
   margin-block: 8px !important;
-  background-color: light-dark(rgba(1, 1, 1, 0.075), rgba(255, 255, 255, 0.15)) !important;
+  background-color: light-dark(
+    rgba(1, 1, 1, 0.075),
+    rgba(255, 255, 255, 0.15)
+  ) !important;
 }
 
 #tabbrowser-tabs {
@@ -80,7 +93,7 @@ browser {
 tab {
   font-size: 1.1rem !important;
   color: var(--base-white) !important;
-  
+
   .tab-icon-overlay {
     display: none !important;
   }
@@ -89,67 +102,95 @@ tab {
 #zen-essentials-container {
   gap: 6px !important;
   --tab-min-height: 52px !important;
-  
+
   .tab-icon-image {
     scale: 1.1 !important;
   }
-  
+
   .tabbrowser-tab:not([selected]) {
     .tab-background {
-      background: color-mix(in srgb, var(--base-primary-color) 10%, transparent) !important;
-
+      background: color-mix(
+        in srgb,
+        var(--base-primary-color) 10%,
+        transparent
+      ) !important;
     }
     &:hover .tab-background {
-      background: color-mix(in srgb, var(--base-primary-color) 15%, transparent) !important;
+      background: color-mix(
+        in srgb,
+        var(--base-primary-color) 15%,
+        transparent
+      ) !important;
     }
   }
 }
 
 .tab-background {
-    --zen-pinned-tabs-bgcolor: color-mix(in srgb, var(--base-primary-color) 7%, transparent) !important;
-    --tab-hover-background-color: color-mix(in srgb, var(--base-primary-color) 7%, transparent) !important; 
-    
-    &:is([selected], [multiselected]) {
-      background-color: color-mix(in srgb, var(--base-primary-color) 35%, transparent) !important;
-    }
+  --zen-pinned-tabs-bgcolor: color-mix(
+    in srgb,
+    var(--base-primary-color) 7%,
+    transparent
+  ) !important;
+  --tab-hover-background-color: color-mix(
+    in srgb,
+    var(--base-primary-color) 7%,
+    transparent
+  ) !important;
+
+  &:is([selected], [multiselected]) {
+    background-color: color-mix(
+      in srgb,
+      var(--base-primary-color) 35%,
+      transparent
+    ) !important;
+  }
 }
 
 #navigator-toolbox {
   transition-duration: 100ms !important;
   transition-delay: 100ms !important;
+  padding-left: 4px !important;
   --border-radius-medium: var(--base-radius) !important;
   --tab-border-radius: var(--base-radius) !important;
-  --toolbarbutton-hover-background: color-mix(in srgb, var(--base-primary-color) 7%, transparent) !important;
+  --toolbarbutton-hover-background: color-mix(
+    in srgb,
+    var(--base-primary-color) 7%,
+    transparent
+  ) !important;
 }
 
 #nav-bar {
-  --zen-toolbar-height: 44px !important;
+  --zen-toolbar-height: 52px !important;
   margin-bottom: 4px !important;
 }
 
 #urlbar {
   --toolbarbutton-border-radius: var(--base-radius) !important;
   --tab-border-radius: var(--base-radius) !important;
-  --urlbar-height: 40px !important;
-  --urlbar-container-height: 42px !important;
-  
+  --urlbar-height: 48px !important;
+  --urlbar-container-height: 50px !important;
+
   &:not([open]) {
     #urlbar-background {
-       background: color-mix(in srgb, var(--base-primary-color) 10%, transparent) !important;
+      background: color-mix(
+        in srgb,
+        var(--base-primary-color) 10%,
+        transparent
+      ) !important;
     }
   }
-  
+
   &:not([breakout-extend="true"]) .urlbar-input-container .urlbar-input-box {
     padding-left: 6px !important;
   }
-  
+
   #blocked-permissions-container {
     display: none !important;
   }
-  
-  #page-action-buttons, 
-  #tracking-protection-icon-container, 
-  #urlbar-search-button, 
+
+  #page-action-buttons,
+  #tracking-protection-icon-container,
+  #urlbar-search-button,
   remote-control-box {
     display: none !important;
   }
@@ -167,7 +208,7 @@ tab {
   width: 100% !important;
   justify-items: center !important;
   gap: 8px !important;
-  
+
   toolbarbutton {
     margin: 0 !important;
     width: 32px !important;
@@ -177,8 +218,8 @@ tab {
 
 #unified-extensions-button {
   opacity: 0;
-  transition: all .15s ease-out;
-  
+  transition: all 0.15s ease-out;
+
   &:hover {
     opacity: 1;
   }
@@ -187,7 +228,7 @@ tab {
 .zen-workspace-icon {
   position: relative;
   color: transparent !important;
-  
+
   &::after {
     content: "";
     position: absolute;
