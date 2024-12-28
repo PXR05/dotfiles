@@ -1,5 +1,10 @@
 font-family = JetBrainsMono Nerd Font Mono
 font-size = 16
+
 gtk-titlebar = false
 adw-toolbar-style = flat
+
 theme = MaterialOcean
+
+window-padding-balance = true
+window-padding-color = extend
