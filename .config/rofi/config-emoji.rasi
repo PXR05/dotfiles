@@ -4,8 +4,7 @@
 
 /* ---- Entry ---- */
 entry {
-  width: 37%;
-  placeholder: "💫 Search Emoji's";
+  placeholder: "Search emoji";
 }
 
 /* ---- Listview ---- */

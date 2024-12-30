@@ -4,8 +4,7 @@
 
 /* ---- Entry ---- */ 
 entry {
-  width: 20%;
-  placeholder: "🏙️ Choose desired wallpaper effect";
+  placeholder: "Search wallpaper effect";
 }
 
 /* ---- Window ---- */

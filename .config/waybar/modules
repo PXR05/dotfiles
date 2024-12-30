@@ -450,7 +450,7 @@
 		"󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
 	],
 	"on-click": "nm-connection-editor",
-	"on-click-right": "nm-connection-editor"
+	"on-click-right": "ghostty -e nmtui"
 },
 "network#speed": {
 	"interval": 1,

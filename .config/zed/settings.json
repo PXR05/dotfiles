@@ -1,0 +1,42 @@
+{
+  "ui_font_size": 18,
+  "buffer_font_size": 20,
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "format_on_save": "prettier",
+  "autosave": "on_focus_change",
+  "theme": {
+    "mode": "dark",
+    "light": "Serendipity Midnight Minimal",
+    "dark": "Serendipity Midnight Minimal"
+  },
+  "toolbar": {
+    "breadcrumbs": false,
+    "selections_menu": false,
+    "quick_actions": false
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "assistant": {
+    "button": false,
+    "enabled": false,
+    "version": "2"
+  },
+  "outline_panel": {
+    "dock": "right",
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "terminal": {
+    "dock": "bottom",
+    "font_size": 18
+  },
+  "project_panel": {
+    "dock": "right"
+  }
+}

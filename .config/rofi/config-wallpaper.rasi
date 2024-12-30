@@ -20,8 +20,7 @@ imagebox {
 
 
 entry {
-  expand: false;
-  placeholder: "🎞️ Choose Wallpaper";
+  placeholder: "Search wallpaper";
 }
 
 /* ---- Listview ---- */

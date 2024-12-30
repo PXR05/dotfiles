@@ -1,9 +1,8 @@
-/* Master Config */
 
 /* ---- Configuration ---- */
 
 configuration {
-	modi:                   "drun,run,filebrowser,window";
+	modi:                   "drun";
   show-icons:             true;
   display-drun:           "Apps";
   display-run:            "Run";
@@ -22,7 +21,7 @@ configuration {
 
 /* ---- Global Properties ---- */
 * {
-    font:                        "JetBrainsMono Nerd Font Mono 16";
+    font:                        "JetBrainsMono Nerd Font Mono 12";
     background-alt:              @selected-active-background; // Buttons background
     selected:                    @selected-normal-background; // Button selected
     active:                      @selected-active-background; // Window activated
@@ -54,7 +53,6 @@ window {
 
 /* ----- Main Box ----- */
 mainbox {
-	  padding:					           8px;
     enabled:                     true;
     orientation:                 vertical;
     children:                    [ "inputbar", "listbox" ];
@@ -65,12 +63,10 @@ mainbox {
 /* ---- Inputbar ---- */
 inputbar {
     enabled:                     true;
-    padding:                     16px;
-    margin:                      12px;
     background-color:            transparent;
-    border-radius:               8px;
+    border-radius:               16px;
     orientation:                 horizontal;
-    children:                    ["entry", "dummy", "mode-switcher" ];
+    children:                    ["entry"];
     background-image:            url("~/.config/rofi/.current_wallpaper", width);
 }
 
@@ -78,20 +74,22 @@ inputbar {
 entry {
     enabled:                     true;
     expand:                      false;
-    width:                       20%;
-    padding:                     12px;
+    min-width:                   40%;
+    width:                       100%;
+    padding:                     28px;
     border-radius:               8px;
-    background-color:            @selected;
-    text-color:                  @text-selected;
+    transparency:                "real";
+    background-color:            rgba(0,0,0,0.5);
+    text-color:                  @selected;
     cursor:                      text;
-    placeholder:                 "🖥️ Search "; // << Search symbol
+    placeholder:                 "Search";
     placeholder-color:           inherit;
 }
 
 /* ---- Listbox ---- */
 listbox {
-    spacing:                     12px;
-    padding:                     12px;
+    spacing:                     16px;
+    padding:                     16px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
@@ -202,7 +200,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        36px;
+    size:                        24px;
     cursor:                      inherit;
 }
 element-text {

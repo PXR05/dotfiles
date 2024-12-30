@@ -133,7 +133,7 @@ tooltip label {
     color: @foreground;
     border-radius: 4px;
 	  padding: 8px;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 #temperature.critical {
