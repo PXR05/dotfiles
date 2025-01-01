@@ -3,9 +3,9 @@
 ```sh
 git clone https://github.com/PXR05/dotfiles.git
 cd dotfiles
-rm -r .git
+sudo rm -r .git
 chmod +x install.sh
-./install.sh
+sudo ./install.sh
 ```
 
 ## Packages
@@ -80,6 +80,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosugges
 #### rust
 
 ```sh
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && \
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && \
 cargo install wallust
 ```
