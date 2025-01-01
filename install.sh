@@ -44,6 +44,7 @@ install_core() {
         nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp \
         swappy swaync swww thunar ttf-nerd-fonts-symbols vlc waybar \
         wl-copy wlogout zen-browser-bin zsh
+    sudo chsh -s /usr/bin/zsh
 }
 
 install_dev() {
@@ -137,6 +138,8 @@ else
 fi
 
 echo "----------------------------------------"
-echo "Installation complete!"
+echo "Installation complete! Please reboot the device"
 copy_dotfiles
 echo "----------------------------------------"
+
+exec zsh
