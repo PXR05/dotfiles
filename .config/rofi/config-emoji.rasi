@@ -1,14 +1,14 @@
 /* Main Config - emoji */
-
 @import "~/.config/rofi/config.rasi" 
 
-/* ---- Entry ---- */
 entry {
-  placeholder: "Search emoji";
+  placeholder: "Search Emoji";
 }
 
-/* ---- Listview ---- */
-listview {
-  columns: 1;
-  lines: 8;
+element {
+  children: [group];
+}
+
+element-icon {
+  size: 0px;
 }

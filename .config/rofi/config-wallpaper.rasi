@@ -1,8 +1,5 @@
-/* Main Config (wallpaper) */
-
 @import "~/.config/rofi/config.rasi" 
 
-/* ---- Configuration ---- */ 
 configuration {
   modi: "drun";
 }
@@ -11,38 +8,30 @@ window {
   width: 60%;
 }
 
-/* ---- Imagebox ---- */
 imagebox {
   orientation: vertical;
   children:
     [ "entry", "listbox"];
 }
 
-
 entry {
-  placeholder: "Search wallpaper";
+  placeholder: "Search Wallpaper";
 }
 
-/* ---- Listview ---- */
 listview {
   columns: 4;
   lines: 3;
 }
 
-/* ---- Element ---- */
 element {
   orientation: vertical;
   padding: 8px;
   spacing: 8px;
   border-radius: 8px;
+	children: [element-icon, element-text];
 }
 
 element-icon {
   size: 20%;
 }
 
-element-text {
-  font: "JetBrainsMono Nerd Font Mono 12";
-  vertical-align: 0.5;
-  horizontal-align: 0.5;
-}

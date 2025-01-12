@@ -1,44 +1,33 @@
-/* Main Config (compact) */
-
 @import "~/.config/rofi/config.rasi" 
 
-/* ---- Configuration ---- */ 
 configuration {
   modi: "drun";
 }
 
-/* ---- Window ---- */
 window {
   width: 40%;
-  border-radius: 16px;
 }
 
-/* ---- Inputbar ---- */
-inputbar {
-  background-image: url("~/.config/rofi/.current_wallpaper", width);
-}
-
-/* ---- Imagebox ---- */
 imagebox {
   orientation: vertical;
   children: [ "entry", "listview"];
 }
 
-/* ---- Entry input ---- */
 entry {
-  placeholder: "Search configs";
+  placeholder: "Search Configs";
 }
 
-/* ---- Listview ---- */
 listview {
-  columns: 2;
+  columns: 1;
   lines: 8;
   spacing: 4px;
   scrollbar: false;
-  border-radius: 8px;
 }
 
-/* ---- Element ---- */
-element {
-  border-radius: 8px;
+element-icon {
+  size: 0px;
+}
+
+textbox {
+  str: "Config";
 }
