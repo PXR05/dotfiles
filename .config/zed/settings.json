@@ -1,4 +1,9 @@
 {
+  "telemetry": {
+    "metrics": false,
+    "diagnostics": true
+  },
+  "base_keymap": "VSCode",
   "ui_font_size": 18,
   "buffer_font_size": 20,
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
@@ -8,7 +13,7 @@
   "theme": {
     "mode": "dark",
     "light": "Serendipity Midnight Minimal",
-    "dark": "Serendipity Midnight Minimal"
+    "dark": "Tokyo Night"
   },
   "toolbar": {
     "breadcrumbs": false,
