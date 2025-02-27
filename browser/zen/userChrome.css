@@ -61,7 +61,6 @@
 /* TABS */
 
 tab {
-  font-size: 1rem !important;
   color: var(--base-white) !important;
   
   .tab-icon-overlay {
@@ -117,10 +116,7 @@ tab {
   margin-bottom: 2px !important;
 }
 
-#tabs-newtab-button {
-  font-size: 1rem !important;
-  
-  
+#tabs-newtab-button {  
   .toolbarbutton-text {
     padding-left: 12px !important;
     margin-top: -2px !important;
@@ -143,12 +139,6 @@ tab {
 #urlbar {
   --toolbarbutton-border-radius: var(--base-radius) !important;
   --tab-border-radius: var(--base-radius) !important;
-    
-  &[breakout-extend="true"] {
-    #urlbar-input {
-      font-size: 1.15rem !important;
-    }
-  }
   
   &:not([open]) {
     #urlbar-background {
@@ -162,6 +152,11 @@ tab {
     
   #blocked-permissions-container {
     display: none !important;
+  }
+  
+  #urlbar-zoom-button {
+    --urlbar-box-bgcolor: oklch(from var(--base-primary-color) l c h / 0.25) !important;
+    transition: all 0.1s ease-out;
   }
 }
 
