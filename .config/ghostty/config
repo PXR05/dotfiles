@@ -7,6 +7,7 @@ adw-toolbar-style = flat
 
 theme = MaterialOcean
 
+window-decoration = none
 window-padding-balance = true
 window-padding-color = extend
 
