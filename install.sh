@@ -72,6 +72,10 @@ install_extra() {
 }
 
 install_font() {
+    print_section "Atkinson Hyperlegible Font"
+
+    install_packages ttf-atkinson-hyperlegible
+    
     print_section "JetBrains Mono Nerd Font"
 
     mkdir -p ~/.local/share/fonts
