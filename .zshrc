@@ -43,7 +43,6 @@ export WLR_NO_HARDWARE_CURSORS=1
 export FZF_DEFAULT_OPTS='--height 50% --layout reverse --border --preview "bat --color=always --style=numbers --line-range=:500 {}"'
 export FZF_CTRL_R_OPTS='--preview ""'
 export JAVA_HOME="$HOME/.jdks/corretto-18.0.2"
-export PATH=/home/pxr/.spicetify:$PATH
 export PATH=/home/pxr/.local/bin:$PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$PATH:/opt/nvim-linux64/bin"
@@ -77,3 +76,5 @@ alias cfg='/usr/bin/git --git-dir=/home/pxr/.cfg/ --work-tree=/home/pxr'
 
 # bun completions
 [ -s "/home/pxr/.bun/_bun" ] && source "/home/pxr/.bun/_bun"
+export PATH="/home/pxr/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/pxr/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"

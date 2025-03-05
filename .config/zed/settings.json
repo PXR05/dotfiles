@@ -1,4 +1,7 @@
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "telemetry": {
     "metrics": false,
     "diagnostics": true
@@ -14,6 +17,10 @@
     "mode": "dark",
     "light": "Serendipity Midnight Minimal",
     "dark": "Tokyo Night"
+  },
+  "git_panel": {
+    "button": true,
+    "dock": "right"
   },
   "toolbar": {
     "breadcrumbs": false,
