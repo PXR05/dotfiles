@@ -113,7 +113,6 @@ browser {
 /* TABS */
 
 tab {
-  font-size: 1.15rem !important;
   color: var(--base-white) !important;
   
   .tab-icon-overlay {
@@ -170,9 +169,6 @@ tab {
 }
 
 #tabs-newtab-button {
-  font-size: 1.15rem !important;
-  
-  
   .toolbarbutton-text {
     padding-left: 12px !important;
     margin-top: -2px !important;
