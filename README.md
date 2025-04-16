@@ -30,7 +30,7 @@ sudo ./install.sh
 #### hyprland
 
 ```sh
-yay -S --noconfirm hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct libva libva-nvidia-driver-git linux-headers polkit-gnome
+yay -S --noconfirm hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct libva libva-nvidia-driver-git nvidia-inst linux-headers polkit-gnome
 ```
 
 #### pipewire

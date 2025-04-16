@@ -42,7 +42,7 @@ install_hyprland() {
     print_section "Hyprland"
     install_packages hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland \
         xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct libva \
-        libva-nvidia-driver-git linux-headers polkit-gnome
+        libva-nvidia-driver-git nvidia-inst linux-headers polkit-gnome
 }
 
 install_audio() {
@@ -63,19 +63,23 @@ install_core() {
 
 install_dev() {
     print_section "Development tools"
-    install_packages bun go neovim nodejs npm visual-studio-code-bin zed
+    install_packages go neovim nodejs npm visual-studio-code-bin zed
+    if ! curl -fsSL https://bun.sh/install | bash >>"$log_file" 2>&1; then
+        echo "Failed to install Bun"
+        failed_installations+=("bun")
+    fi
 }
 
 install_extra() {
     print_section "Extra applications"
-    install_packages discord lutris obsidian obs-studio spotify steam wine winetricks
+    install_packages discord obsidian obs-studio spotify
 }
 
 install_font() {
     print_section "Atkinson Hyperlegible Font"
 
     install_packages ttf-atkinson-hyperlegible
-    
+
     print_section "JetBrains Mono Nerd Font"
 
     mkdir -p ~/.local/share/fonts

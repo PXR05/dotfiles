@@ -5,7 +5,7 @@ SAVEHIST=5000
 
 setopt autocd beep
 
-zstyle :compinstall filename '/home/pxr/.zshrc'
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -28,12 +28,12 @@ export FZF_DEFAULT_OPTS='--height 50% --layout reverse --border --preview "bat -
 export FZF_CTRL_R_OPTS='--preview ""'
 
 # Path configuration
-export PATH=/home/pxr/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH=/home/pxr/flutter:$PATH
-export PATH="/home/pxr/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/pxr/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+export PATH=$HOME/flutter:$PATH
+export PATH="$HOME/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
 # Development environments
 export JAVA_HOME="$HOME/.jdks/corretto-18.0.2"
@@ -53,7 +53,7 @@ alias cls="clear"
 alias ff="fzf"
 alias nf="fastfetch --config ~/.config/fastfetch/config-compact.jsonc"
 alias air='$(go env GOPATH)/bin/air'
-alias cfg='/usr/bin/git --git-dir=/home/pxr/.cfg/ --work-tree=/home/pxr'
+alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 # Config editing shortcuts
 alias edit-zsh="nvim ~/.zshrc"
@@ -104,7 +104,7 @@ export NVM_DIR="$HOME/.nvm"
 # Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
-[ -s "/home/pxr/.bun/_bun" ] && source "/home/pxr/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # FZF
 source <(fzf --zsh)
