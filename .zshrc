@@ -31,7 +31,6 @@ export FZF_CTRL_R_OPTS='--preview ""'
 export PATH=$HOME/.local/bin:$PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$PATH:/opt/nvim-linux64/bin"
-export PATH=$HOME/flutter:$PATH
 export PATH="$HOME/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="$HOME/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
