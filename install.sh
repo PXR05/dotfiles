@@ -26,6 +26,7 @@ print_section() {
 
 failed_installations=()
 log_file="/tmp/dotfiles_install.log"
+base_dir=$(pwd)
 
 install_packages() {
     local packages=("$@")
@@ -41,8 +42,7 @@ install_packages() {
 install_hyprland() {
     print_section "Hyprland"
     install_packages hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland \
-        xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct libva \
-        libva-nvidia-driver-git nvidia-inst linux-headers polkit-gnome
+        xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct nvidia-inst
 }
 
 install_audio() {
@@ -107,6 +107,12 @@ install_font() {
     unzip -o JetBrainsMono.zip >>"$log_file" 2>&1
     rm -f JetBrainsMono.zip
     fc-cache -fv >>"$log_file" 2>&1
+
+    cd "$base_dir" || {
+        echo "Failed to return to base directory"
+        failed_installations+=("jetbrains-mono-font")
+        return
+    }
 }
 
 install_terminal() {
@@ -142,13 +148,13 @@ install_rust() {
 }
 
 install_all() {
-    install_hyprland
-    install_audio
     install_core
     install_dev
-    install_extra
-    install_font
     install_terminal
+    install_font
+    install_hyprland
+    install_audio
+    install_extra
     install_rust
 }
 
@@ -159,7 +165,11 @@ copy_dotfiles() {
         echo "Skipping dotfiles copy."
     else
         echo "Copying dotfiles to home directory..."
-        cp -rf . ~
+        cp -rf .config/* ~/.config/
+        cp -rf .local/* ~/.local/
+        cp -rf .zshrc ~/.zshrc
+        cp -rf .themes ~/.themes
+        cp -rf browser ~/browser
         echo "Dotfiles copied successfully!"
     fi
 }
