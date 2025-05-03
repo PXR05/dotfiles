@@ -1,3 +1,6 @@
+> [!WARNING]  
+> Outdated, use the main branch instead
+
 # .dotfiles
 
 ```sh
