@@ -1,0 +1,14 @@
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 15
+bold-is-bright = true
+
+gtk-titlebar = false
+adw-toolbar-style = flat
+
+theme = MaterialOcean
+
+window-decoration = none
+window-padding-balance = true
+window-padding-color = extend
+
+resize-overlay = never

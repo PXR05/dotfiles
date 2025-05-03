@@ -1,0 +1,14 @@
+/* Main Config - emoji */
+@import "~/.config/rofi/config.rasi" 
+
+entry {
+  placeholder: "Search Emoji";
+}
+
+element {
+  children: [group];
+}
+
+element-icon {
+  size: 0px;
+}

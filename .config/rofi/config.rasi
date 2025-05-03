@@ -1,0 +1,18 @@
+
+@import "~/.config/rofi/master-config.rasi" 
+
+configuration {
+	font:	"JetBrainsMono Nerd Font Mono 12";
+}
+window {
+    width:	40%;
+}
+
+listview {
+    lines:	8;
+}
+
+button {
+    width:	110px;
+}
+

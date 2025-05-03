@@ -1,0 +1,33 @@
+@import "~/.config/rofi/config.rasi" 
+
+configuration {
+  modi: "drun";
+}
+
+window {
+  width: 40%;
+}
+
+imagebox {
+  orientation: vertical;
+  children: [ "entry", "listview"];
+}
+
+entry {
+  placeholder: "Search Configs";
+}
+
+listview {
+  columns: 1;
+  lines: 8;
+  spacing: 4px;
+  scrollbar: false;
+}
+
+element-icon {
+  size: 0px;
+}
+
+textbox {
+  str: "Config";
+}
