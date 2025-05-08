@@ -47,6 +47,8 @@ alias fsizeall="sudo du -xh --exclude=/{proc,sys,dev,run} * | sort -h"
 
 # Applications
 alias vim="nvim"
+alias c="code"
+alias z="zeditor"
 alias code="code --disable-gpu"
 alias cls="clear"
 alias ff="fzf"
