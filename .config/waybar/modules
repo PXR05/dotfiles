@@ -104,7 +104,7 @@
 //  NUMBERS and ICONS style
 "hyprland/workspaces#4": {
 	"format": "{name}",
-	"format": "{icon} ",
+	"format": "{icon}",
 	"show-special": false,
 	"on-click": "activate",
 	"on-scroll-up": "hyprctl dispatch workspace e+1",
@@ -356,7 +356,7 @@
 },
 "hyprland/window": {
 	"format": "{}",
-	"max-length": 80,
+	"max-length": 50,
 	"separate-outputs": true,
 	"offscreen-css": true,
 	"offscreen-css-text": "(inactive)",
@@ -420,7 +420,7 @@
 },
 "network": {
 	"format": "{ifname}",
-	"format-wifi": "{icon} {signalStrength}%",
+	"format-wifi": "{icon} {essid}",
 	"format-ethernet": "󰌘",
 	"format-disconnected": "󰌙",
 	"tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",

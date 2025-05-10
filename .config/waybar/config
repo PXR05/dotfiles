@@ -24,7 +24,7 @@
 	"tray",
  	"group/audio",
   "group/connections",
-	"group/laptop",
+	"battery",
 	],
 }
 
