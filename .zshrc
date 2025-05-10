@@ -28,6 +28,7 @@ export FZF_DEFAULT_OPTS='--height 50% --layout reverse --border --preview "bat -
 export FZF_CTRL_R_OPTS='--preview ""'
 
 # Path configuration
+export TERMINAL=ghostty
 export PATH=$HOME/.local/bin:$PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$PATH:/opt/nvim-linux64/bin"
