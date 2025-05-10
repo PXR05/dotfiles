@@ -134,6 +134,10 @@ tooltip label {
   font-size: 1em;
 }
 
+#window {
+  padding-left: 0px;
+}
+
 #temperature.critical {
   background-color: #ff0000;
 }
