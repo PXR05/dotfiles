@@ -10,6 +10,18 @@ zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 
+# Completion for the 'c' function
+_c_completion() {
+  local expl
+  local -a sub_dirs
+  sub_dirs=($CODE/*(N/))
+
+  sub_dirs=("${sub_dirs[@]#$CODE/}")
+
+  _wanted directories expl 'directory' compadd -a sub_dirs
+}
+compdef _c_completion c
+
 # === Key Bindings ===
 bindkey "^[[1;5C" forward-word  # Ctrl + Right arrow
 bindkey "^[[1;5D" backward-word # Ctrl + Left arrow
@@ -48,7 +60,6 @@ alias fsizeall="sudo du -xh --exclude=/{proc,sys,dev,run} * | sort -h"
 
 # Applications
 alias vim="nvim"
-alias c="code"
 alias z="zeditor"
 alias code="code --disable-gpu"
 alias cls="clear"
@@ -66,10 +77,18 @@ alias edit-nf="nvim ~/.config/fastfetch/config-compact.jsonc"
 alias edit-rofi="nvim ~/.config/rofi/master-config.rasi"
 
 # Directory navigation shortcuts
-alias goto-code="cd ~/Documents/code/"
 alias goto-nvim="cd ~/.config/nvim/lua/"
 alias goto-rofi="cd ~/.config/rofi/"
 alias goto-hypr="cd ~/.config/hypr/"
+function c() {
+  local target_path="$CODE/$1"
+  if [ -d "$target_path" ]; then
+    code "$target_path"
+  else
+    echo "Debug: Path '$target_path' is not recognized as a directory or does not exist. Attempting to open with VS Code anyway."
+    code "$target_path"
+  fi
+}
 
 # Github shortcuts
 alias gclone="git clone"
@@ -87,7 +106,7 @@ alias grs="git reset --soft HEAD~1"
 alias grm="git reset --mixed HEAD~1"
 alias grh="git reset --hard HEAD~1"
 function lazyg() {
-    git add . && git commit -m "$1" && git push
+  git add . && git commit -m "$1" && git push
 }
 
 # === External Tools & Plugins ===
