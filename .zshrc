@@ -1,4 +1,4 @@
-# === ZSH Basic Settings ===
+# === Basic Settings ===
 HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=5000
@@ -21,11 +21,14 @@ _c_completion() {
   _wanted directories expl 'directory' compadd -a sub_dirs
 }
 compdef _c_completion c
+compdef _c_completion goto-code
+compdef _git cfg
 
 # === Key Bindings ===
 bindkey "^[[1;5C" forward-word  # Ctrl + Right arrow
 bindkey "^[[1;5D" backward-word # Ctrl + Left arrow
-bindkey '^H' backward-kill-word # Ctrl + Backspace
+bindkey "^H" backward-kill-word # Ctrl + Backspace
+bindkey "^[[3;5~" kill-word     # Ctrl + Delete
 bindkey "^[[3~" delete-char     # Delete key
 
 # === Environment Variables ===
@@ -60,7 +63,6 @@ alias fsizeall="sudo du -xh --exclude=/{proc,sys,dev,run} * | sort -h"
 
 # Applications
 alias vim="nvim"
-alias z="zeditor"
 alias code="code --disable-gpu"
 alias cls="clear"
 alias ff="fzf"
@@ -80,6 +82,17 @@ alias edit-rofi="nvim ~/.config/rofi/master-config.rasi"
 alias goto-nvim="cd ~/.config/nvim/lua/"
 alias goto-rofi="cd ~/.config/rofi/"
 alias goto-hypr="cd ~/.config/hypr/"
+
+function goto-code() {
+  if [ -z "$1" ]; then
+    cd "$CODE"
+  elif [ -d "$CODE/$1" ]; then
+    cd "$CODE/$1"
+  else
+    echo "Directory '$CODE/$1' not found."
+  fi
+}
+
 function c() {
   local target_path="$CODE/$1"
   if [ -d "$target_path" ]; then
@@ -102,9 +115,27 @@ alias gco="git checkout"
 alias glog="git log --oneline --graph --decorate --all"
 alias gstash="git stash"
 alias gpop="git stash pop"
-alias grs="git reset --soft HEAD~1"
-alias grm="git reset --mixed HEAD~1"
-alias grh="git reset --hard HEAD~1"
+function grs() {
+  if [ -z "$@" ]; then
+    git reset --soft HEAD~1
+  else
+    git reset --soft "$@"
+  fi
+}
+function grm() {
+  if [ -z "$@" ]; then
+    git reset --mixed HEAD~1
+  else
+    git reset --mixed "$@"
+  fi
+}
+function grh() {
+  if [ -z "$@" ]; then
+    git reset --hard HEAD~1
+  else
+    git reset --hard "$@"
+  fi
+}
 function lazyg() {
   git add . && git commit -m "$1" && git push
 }
@@ -116,11 +147,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Oh-my-posh
 eval "$(oh-my-posh init zsh --config ~/.config/omp/tokyo.omp.json)"
-
-# NVM (Node Version Manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
