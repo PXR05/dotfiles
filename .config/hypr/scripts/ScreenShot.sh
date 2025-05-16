@@ -81,10 +81,6 @@ fi
 
 if [[ "$1" == "--now" ]]; then
 	shotnow
-elif [[ "$1" == "--in5" ]]; then
-	shot5
-elif [[ "$1" == "--in10" ]]; then
-	shot10
 elif [[ "$1" == "--win" ]]; then
 	shotwin
 elif [[ "$1" == "--area" ]]; then

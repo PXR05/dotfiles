@@ -41,7 +41,7 @@ yay -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontr
 #### core
 
 ```sh
-yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch ghostty grim jq nm-connection-editor nwg-look ripgrep rofi-wayland slurp swappy swww thunar ttf-nerd-fonts-symbols vlc waybar wl-clipboard wlogout zen-browser-bin zsh
+yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch ghostty grim jq nm-connection-editor nwg-look ripgrep rofi-wayland slurp swappy swww thunar tumbler ttf-nerd-fonts-symbols vlc waybar wl-clipboard wlogout zen-browser-bin zsh
 ```
 
 #### dev

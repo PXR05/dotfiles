@@ -57,7 +57,7 @@ install_core() {
     install_packages bat bibata-cursor-theme-bin blueman bluez bluez-utils \
         brightnessctl btop cliphist eza fastfetch ghostty grim jq \
         nm-connection-editor nwg-look ripgrep rofi-wayland slurp \
-        swappy swww thunar ttf-nerd-fonts-symbols vlc waybar \
+        swappy swww thunar tumbler ttf-nerd-fonts-symbols vlc waybar \
         wl-clipboard wlogout zen-browser-bin zsh
     sudo chsh -s /usr/bin/zsh || echo "Failed to change shell to zsh"
 }
