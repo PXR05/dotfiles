@@ -58,10 +58,10 @@ main() {
             $tty -e $editor "$BarConfigs/style.css"
             ;;
         11)
-            $tty -e $editor "$BarConfigs/config"
+            $tty -e $editor "$BarConfigs/config.jsonc"
             ;;
         12)
-            $tty -e $editor "$BarConfigs/modules"
+            $tty -e $editor "$BarConfigs/modules.jsonc"
             ;;
         13)
             $tty -e $editor "$LogoutConfigs/style.css"
