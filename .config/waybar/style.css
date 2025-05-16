@@ -139,6 +139,18 @@ tooltip label {
   font-size: 1em;
 }
 
+#workspaces {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#tray {
+  padding-left: 4px;
+}
+#tray > * > * {
+  margin-left: 8px;
+}
+
 #temperature.critical {
   background-color: #ff0000;
 }
