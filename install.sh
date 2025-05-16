@@ -43,20 +43,20 @@ install_packages() {
 install_hyprland() {
     print_section "Hyprland"
     install_packages hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland \
-        xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct nvidia-inst
+        xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct nvidia-inst polkit-gnome
 }
 
 install_audio() {
     print_section "PipeWire audio system"
     install_packages pipewire pipewire-alsa pipewire-pulse pipewire-jack \
-        pavucontrol wireplumber
+        pavucontrol wireplumber jamesdsp pamixer
 }
 
 install_core() {
     print_section "Core packages"
     install_packages bat bibata-cursor-theme-bin blueman bluez bluez-utils \
         brightnessctl btop cliphist eza fastfetch ghostty grim jq \
-        nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp \
+        nm-connection-editor nwg-look ripgrep rofi-wayland slurp \
         swappy swww thunar ttf-nerd-fonts-symbols vlc waybar \
         wl-clipboard wlogout zen-browser-bin zsh
     sudo chsh -s /usr/bin/zsh || echo "Failed to change shell to zsh"
@@ -64,7 +64,7 @@ install_core() {
 
 install_dev() {
     print_section "Development tools"
-    install_packages go neovim nodejs npm visual-studio-code-bin zed
+    install_packages go neovim nodejs npm visual-studio-code-bin docker-desktop
     if ! curl -fsSL https://bun.sh/install | bash >>"$log_file" 2>&1; then
         echo "Failed to install Bun"
         failed_installations+=("bun")
@@ -73,7 +73,7 @@ install_dev() {
 
 install_extra() {
     print_section "Extra applications"
-    install_packages discord obsidian obs-studio spotify
+    install_packages discord obs-studio spotify qbittorrent
 }
 
 install_font() {

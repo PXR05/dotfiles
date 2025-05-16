@@ -29,31 +29,31 @@ sudo ./install.sh
 #### hyprland
 
 ```sh
-yay -S --noconfirm hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct libva libva-nvidia-driver-git nvidia-inst linux-headers polkit-gnome
+yay -S --noconfirm hyprland hyprlock hyprpicker xdg-desktop-portal-hyprland xorg-xwayland qt5-wayland qt6-wayland qt5ct qt6ct nvidia-inst linux-headers polkit-gnome
 ```
 
-#### pipewire
+#### audio
 
 ```sh
-yay -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumber
+yay -S --noconfirm pipewire pipewire-alsa pipewire-pulse pipewire-jack pavucontrol wireplumber jamesdsp pamixer
 ```
 
 #### core
 
 ```sh
-yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch ghostty grim jq nm-connection-editor nwg-look pamixer ripgrep rofi-wayland slurp swappy swww thunar ttf-nerd-fonts-symbols vlc waybar wl-clipboard wlogout zen-browser-bin zsh
+yay -S --noconfirm bat bibata-cursor-theme-bin blueman bluez bluez-utils brightnessctl btop cliphist eza fastfetch ghostty grim jq nm-connection-editor nwg-look ripgrep rofi-wayland slurp swappy swww thunar ttf-nerd-fonts-symbols vlc waybar wl-clipboard wlogout zen-browser-bin zsh
 ```
 
 #### dev
 
 ```sh
-yay -S --noconfirm bun go neovim nodejs npm visual-studio-code-bin zed
+yay -S --noconfirm bun go neovim nodejs npm visual-studio-code-bin docker-desktop
 ```
 
 #### extra
 
 ```sh
-yay -S --noconfirm discord lutris obsidian obs-studio spotify steam wine winetricks
+yay -S --noconfirm discord obs-studio spotify qbittorrent
 ```
 
 ### external
@@ -64,8 +64,8 @@ yay -S --noconfirm discord lutris obsidian obs-studio spotify steam wine winetri
 yay -S --noconfirm ttf-atkinson-hyperlegible && \
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip && \
 cd ~/.local/share/fonts && \
-unzip JetBrainsMono.zip && \
-rm JetBrainsMono.zip && \
+unzip -o JetBrainsMono.zip && \
+rm -f JetBrainsMono.zip && \
 fc-cache -fv
 ```
 
