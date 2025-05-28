@@ -64,6 +64,7 @@ alias fsizeall="sudo du -xh --exclude=/{proc,sys,dev,run} * | sort -h"
 # Applications
 alias vim="nvim"
 alias code="code --disable-gpu"
+alias cursor="cursor --disable-gpu"
 alias cls="clear"
 alias ff="fzf"
 alias nf="fastfetch --config ~/.config/fastfetch/config-compact.jsonc"
@@ -94,12 +95,29 @@ function goto-code() {
 }
 
 function c() {
-  local target_path="$CODE/$1"
+  local use_cursor=false
+  local target_dir="$1"
+
+  if [ "$1" = "-c" ]; then
+    use_cursor=true
+    target_dir="$2"
+  fi
+
+  local target_path="$CODE/$target_dir"
+
   if [ -d "$target_path" ]; then
-    code "$target_path"
+    if [ "$use_cursor" = true ]; then
+      cursor "$target_path"
+    else
+      code "$target_path"
+    fi
   else
-    echo "Debug: Path '$target_path' is not recognized as a directory or does not exist. Attempting to open with VS Code anyway."
-    code "$target_path"
+    echo "Debug: Path '$target_path' is not recognized as a directory or does not exist. Attempting to open anyway."
+    if [ "$use_cursor" = true ]; then
+      cursor "$target_path"
+    else
+      code "$target_path"
+    fi
   fi
 }
 
@@ -160,3 +178,7 @@ zle -N fzf-file-widget
 bindkey -M emacs '^f' fzf-file-widget
 bindkey -M vicmd '^f' fzf-file-widget
 bindkey -M viins '^f' fzf-file-widget
+
+# GPG
+export GPG_TTY=$(tty)
+export GPGKEY=52C48519C8AC150E97F3E46EB614F5852B2088B6
