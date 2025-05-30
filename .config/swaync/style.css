@@ -39,7 +39,7 @@
   .notification-content {
 }
 .notification {
-  background: alpha(@mycolor, 0.5);
+  background: alpha(@mycolor, 1);
 }
 
 .control-center .notification-row .notification-background .notification {
