@@ -22,6 +22,7 @@ _c_completion() {
 }
 compdef _c_completion c
 compdef _c_completion goto-code
+compdef _c_completion pull-code
 compdef _git cfg
 
 # === Key Bindings ===
@@ -89,6 +90,16 @@ function goto-code() {
     cd "$CODE"
   elif [ -d "$CODE/$1" ]; then
     cd "$CODE/$1"
+  else
+    echo "Directory '$CODE/$1' not found."
+  fi
+}
+
+function pull-code() {
+  if [ -z "$1" ]; then
+    git pull
+  elif [ -d "$CODE/$1" ]; then
+    cd "$CODE/$1" && git pull
   else
     echo "Directory '$CODE/$1' not found."
   fi
@@ -181,4 +192,4 @@ bindkey -M viins '^f' fzf-file-widget
 
 # GPG
 export GPG_TTY=$(tty)
-export GPGKEY=52C48519C8AC150E97F3E46EB614F5852B2088B6
+export GPGKEY=52C48519C8AC150E97F3E46EB614F5852B2088B6 # this is just an example
